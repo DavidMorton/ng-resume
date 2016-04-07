@@ -1,0 +1,11 @@
+{
+  "name": "resume",
+  "version": "0.0.1",
+  "private": true,
+  "scripts": {
+    "start": "jade templates --out siteroot"
+  },
+  "dependencies": {
+    "jade": "*"
+  }
+}
