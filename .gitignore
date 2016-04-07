@@ -8,3 +8,5 @@
 siteroot
 
 *.zip
+
+node_modules
