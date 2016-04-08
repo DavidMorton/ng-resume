@@ -16,7 +16,7 @@ mixin h(id, text)
 
 mixin exp(id, title, company, startdate, enddate)
 	.experience
-		div.pointer.collapsed(data-toggle='collapse', data-target='##{id}', href='##{id}', style='clear:both;display:inline-block;width:100%')
+		div.pointer.collapsed.jobtitle(data-toggle='collapse', data-target='##{id}', href='##{id}', style='clear:both;display:inline-block;width:100%')
 			div
 				p.alignleft.expander #{title}, #{company} 
 			p.alignright #{startdate}-#{enddate}
@@ -56,8 +56,6 @@ block content
 			ul
 				li Responsible for the output of an agile team of five developers.
 				li Managed a VSTO application with a WPF UI, and a backend on Server 2013 with 19 WCF Services.
-				// li Ranked as “Exceeds Expectations” for the second year in a row. 
-				// li Turned around a struggling business unit, securing an additional $1M to grow it. 
 				li Onboarded 27 independent components onto continuous integration and deployment.
 				li Reduced coupling between reusable assemblies, dividing them into independent NuGet packages.
 				li Linked automated TeamCity builds with a proprietary deployment system.

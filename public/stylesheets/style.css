@@ -1,15 +1,16 @@
 body {
-  padding: 50px;
-  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+	padding: 50px;
+	font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
 }
 
 a {
-  color: #00B7FF;
+	color: #00B7FF;
 }
 
 h1 {
 	font-size: 20px;
 	text-transform: uppercase;
+	font-weight: bold;
 	margin-top:0px;
 }
 
@@ -17,24 +18,17 @@ h1 p {
 	margin:0px;
 }
 
-.alignleft {
-	float: left;
-	margin:0px;
-}
-.alignright {
-	float: right;
-	margin:0px;
-}
-
 h2 {
 	font-size:18px;
 	text-transform: uppercase;
+	font-weight:bold;
 	margin-bottom:3px;
 }
 
 h3 {
 	font-size:16px;
 	margin-bottom:3px;
+	font-weight:bold;
 }
 
 ul { 
@@ -46,8 +40,30 @@ li {
 	margin-bottom:3px;
 }
 
+p {
+	margin:2px;
+}
+
+.alignleft {
+	float: left;
+	margin:0px;
+}
+
+.alignright {
+	float: right;
+	margin:0px;
+}
+
 .experience {
 	padding-left:15px;
+}
+
+.experienceDetails {
+	padding-left:5px;
+}
+
+.jobtitle {
+	font-weight:bold;
 }
 
 .pointer {
@@ -57,26 +73,27 @@ li {
 	padding-bottom:5px;
 }
 
-.section .expander:before {
-    content: "-";  
-    padding-right:8px;
+.section{
+	padding-left:0px;
 }
 
-.section .collapsed .expander:before, 
+.section .expander:before {
+    content: "-";  
+    padding-right:9px;
+}
+
+.section .collapsed .expander:before {
+	content: "+"; 
+    padding-right:6px; 
+}
+
 .section .collapsed.expander:before {
     content: "+"; 
     padding-right:5px;  
 } 
 
-p {
-	margin:2px;
-}
 .sectionContent { 
 	padding-left:18px;
-}
-
-.section{
-	padding-left:0px;
 }
 
 .skill {
@@ -84,6 +101,15 @@ p {
 }
 
 @media (max-width: 700px) {
+	ul { 
+		margin-top:3px;
+		padding-left:15px;
+	}
+
+    body {
+      padding:10px;
+    }
+
     .container {
       padding:0;
       margin:0;
@@ -109,15 +135,6 @@ p {
 	.alignright:before {
 		content:"\A";
 	}
-
-	ul { 
-		margin-top:3px;
-		padding-left:15px;
-	}
-
-    body {
-      padding:10px;
-    }
 
     .navbar-fixed-top, .navbar-fixed-bottom, .navbar-static-top {
       margin-left: 0;
