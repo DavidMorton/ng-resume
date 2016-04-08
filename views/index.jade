@@ -9,15 +9,17 @@ mixin h(id, text)
 	.section
 		div
 			h2
-				p.pointer(data-toggle='collapse', data-target='##{id}', href='##{id}') #{text}
+				p.expander.pointer.collapsed(data-toggle='collapse', data-target='##{id}', href='##{id}') #{text}
 		.sectionContent.collapse(id='#{id}')
 			block
 
 
 mixin exp(id, title, company, startdate, enddate)
 	.experience
-		h3
-			p.pointer(data-toggle='collapse', data-target='##{id}', href='##{id}') #{title}, #{company}; #{startdate}-#{enddate}
+		div.pointer.collapsed(data-toggle='collapse', data-target='##{id}', href='##{id}', style='clear:both;display:inline-block;width:100%')
+			div
+				p.alignleft.expander #{title}, #{company} 
+			p.alignright #{startdate}-#{enddate}
 		.experienceDetails.collapse(id='#{id}')
 			block
 
@@ -97,7 +99,7 @@ block content
 				li Helped design and develop an ASP.NET project at a major air services provider in Houston.  
 				li Implemented JavaScript, Jquery and AJAX into ASP.NET when AJAX was brand new. 
 				li Implemented a WinForms application for a Florida court system using CAB and Infragistics controls.
-		+exp('exp4', 'Freelance Software Developer', 'Hyperactive Concepts', 'September 2006', 'June 2007')
+		+exp('exp4', 'Freelance Developer', 'Hyperactive Concepts', 'September 2006', 'June 2007')
 			ul
 				li Developed C#, ASP.NET and Javascript applications for clients. 
 				li Completed an administrative back-end in T-SQL for a computer training company.

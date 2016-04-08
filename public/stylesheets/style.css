@@ -17,6 +17,15 @@ h1 p {
 	margin:0px;
 }
 
+.alignleft {
+	float: left;
+	margin:0px;
+}
+.alignright {
+	float: right;
+	margin:0px;
+}
+
 h2 {
 	font-size:18px;
 	text-transform: uppercase;
@@ -25,7 +34,6 @@ h2 {
 
 h3 {
 	font-size:16px;
-	text-transform: uppercase;
 	margin-bottom:3px;
 }
 
@@ -38,31 +46,74 @@ li {
 	margin-bottom:3px;
 }
 
+.experience {
+	padding-left:15px;
+}
+
 .pointer {
 	cursor:pointer;
 	display:inline-block;
 	margin:0px;
+	padding-bottom:5px;
 }
+
+.section .expander:before {
+    content: "-";  
+    padding-right:8px;
+}
+
+.section .collapsed .expander:before, 
+.section .collapsed.expander:before {
+    content: "+"; 
+    padding-right:5px;  
+} 
+
 p {
 	margin:2px;
 }
 .sectionContent { 
-	padding-left:10px;
+	padding-left:18px;
 }
 
 .section{
-	padding-left:10px;
+	padding-left:0px;
 }
 
 .skill {
 	padding-bottom:5px;
 }
 
-@media (max-width: 500px) {
+@media (max-width: 700px) {
     .container {
       padding:0;
       margin:0;
     }
+
+	.alignleft {
+		float: none;
+		margin:15px, 0px, 0px, 0px;
+		padding-bottom:0px;
+		text-indent:-17px;
+
+	}
+
+	.alignright {
+		float: none;
+		margin:0px;
+		padding-top:0px;
+		padding-bottom:10px;
+		padding-left:18px;
+		text-indent:-19px;
+	}
+
+	.alignright:before {
+		content:"\A";
+	}
+
+	ul { 
+		margin-top:3px;
+		padding-left:15px;
+	}
 
     body {
       padding:10px;
