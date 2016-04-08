@@ -1,35 +1,40 @@
 extends layout
 
-block otherstuff
-	h1 Hey!
-
 mixin skill(type, values)
 	p.skill
 		i= type + ' '
 		span= values
 
-mixin h(text)
+mixin h(id, text)
 	.section
-		h2 #{text}
-		.sectionContent
+		div
+			h2(data-toggle='collapse', data-target='##{id}', href='##{id}') #{text}
+		.sectionContent.collapse(id='#{id}')
 			block
 
-mixin exp(title, company, startdate, enddate)
+
+mixin exp(id, title, company, startdate, enddate)
 	.experience
-		h3 #{title}, #{company}; #{startdate}-#{enddate}
-		.experienceDetails
+		h3
+			p(data-toggle='collapse', data-target='##{id}', href='##{id}') #{title}, #{company}; #{startdate}-#{enddate}
+		.experienceDetails.collapse(id='#{id}')
 			block
 
 block content
+	script
+		include ../public/javascripts/foot.js
+		
 	h1
-		p David Morton, Software Developer - 713-422-3448 - 
+		p David Morton, Software Developer 
+		p 713-422-3448
+		p 
 			a(href='mailto:david@isamorton.com') david@isamorton.com
 	
-	+h('Profile')
-		p I don't merely write code; I deliver solutions.
+	+h('profile', 'Profile')
+		p(style='margin-bottom:10px') I don't merely write code; I deliver solutions.
 		p I’m a passionate, insightful and effective software developer with over 10 years of creative problem-solving in C# and .NET. and a deep understanding of SOLID principles, dependency injection and TDD. 
 
-	+h('Technical Skills')
+	+h('skills', 'Technical Skills')
 		+skill('Languages:', 'C#, F#, Javascript, XAML, Objective-C')
 		+skill('Frameworks:', '.NET, Jquery, Entity Framework, WPF, WCF, ASP.NET, NUnit, WinForms, VSTO')
 		+skill('Databases:', 'SQL Server, Oracle, SQL Server Compact')
@@ -37,8 +42,8 @@ block content
 		+skill('Environments:', 'Visual Studio, Xcode')
 		+skill('Other:', 'Git, ReSharper, Debugging via decompiling')
 
-	+h('Experience')
-		+exp('Associate Team Lead', 'JPMorgan', 'January 2015', 'Present')
+	+h('exp', 'Experience')
+		+exp('exp10', 'Associate Team Lead', 'JPMorgan', 'January 2015', 'Present')
 			ul
 				li Responsible for the output of an agile team of five developers.
 				li Managed a VSTO application with a WPF UI, and a backend on Server 2013 with 19 WCF Services.
@@ -51,7 +56,7 @@ block content
 				li Developed small, high impact applications, deployed on over 17,000 desktops across the enterprise.
 				li Wrote Powershell scripts to standardize deployments. 
 
-		+exp('Associate Developer', 'JPMorgan', 'August 2013', 'January 2015')
+		+exp('exp9', 'Associate Developer', 'JPMorgan', 'August 2013', 'January 2015')
 			ul
 				li Designed and implemented a greenfield VSTO application with a WPF UI with over 1500 unit tests.
 				li Designed a framework for 33 advanced PowerPoint charting types with custom formats.
@@ -61,7 +66,7 @@ block content
 				li Led the team in story points completed, and number of lines of code written.
 				li Trained the team in dependency injection and Test Driven Development best practices.
 				li Worked in an Agile/SCRUM team using Atlasssian JIRA for issue management.
-		+exp('Senior Developer', 'LiquidFrameworks, LLC.', 'July 2010', 'August 2013')
+		+exp('exp8', 'Senior Developer', 'LiquidFrameworks, LLC.', 'July 2010', 'August 2013')
 			ul
 				li Maintained and developed a disconnected WPF application using SQL Server Compact. 
 				li Transitioned the flagship product from a site-installed product to a cloud-based product. 
@@ -71,13 +76,13 @@ block content
 				li Developed two tie-in iOS applications using Objective-C. 
 				li Used ProtoBuf serialization to replace SQL Server replication, speeding up sync 500-fold. 
 				li Designed and implemented, from the ground up, an entire survey tool, along with 145 unit tests.
-		+exp('Senior Developer','SolArc, Inc.','March 2010','July 2010')
+		+exp('exp7', 'Senior Developer','SolArc, Inc.','March 2010','July 2010')
 			ul
 				li Designed and implemented a report editing component for RightAngle, a commodities trading software. 
 				li Worked with a large-scale commodities trading platform written in WinForms and C#. 
 				li Converted portions of a PowerBuilder application into C#. 
 				li Designed a document editing system using Windows Workflow Foundation and DevExpress tools. 
-		+exp('Senior Consultant', 'Catapult Systems', 'August 2008', 'March 2010')
+		+exp('exp6', 'Senior Consultant', 'Catapult Systems', 'August 2008', 'March 2010')
 			ul
 				li Designed, implemented and presented on an MVVM implementation in Silverlight 3. 
 				li Helped Catapult Systems, a Microsoft NSI, become thought leaders in the community. 
@@ -85,53 +90,53 @@ block content
 				li Refactored a data-driven ASP.NET project to conform to SOLID principles.
 				li Led various presentations on new technologies, including Jquery. 
 				li Worked for the Houston Texans for a short period of time maintaining their internal applications.  
-		+exp('Consultant', 'Catapult Systems', 'August 2007', 'August 2008')
+		+exp('exp5', 'Consultant', 'Catapult Systems', 'August 2007', 'August 2008')
 			ul
 				li Helped design and develop an ASP.NET project at a major air services provider in Houston.  
 				li Implemented JavaScript, Jquery and AJAX into ASP.NET when AJAX was brand new. 
 				li Implemented a WinForms application for a Florida court system using CAB and Infragistics controls.
-		+exp('Freelance Software Developer', 'Hyperactive Concepts', 'September 2006', 'June 2007')
+		+exp('exp4', 'Freelance Software Developer', 'Hyperactive Concepts', 'September 2006', 'June 2007')
 			ul
 				li Developed C#, ASP.NET and Javascript applications for clients. 
 				li Completed an administrative back-end in T-SQL for a computer training company.
-		+exp('IT Applications Developer', 'Aaron Rents, Inc', 'August 2006', 'August 2007')
+		+exp('exp3', 'IT Applications Developer', 'Aaron Rents, Inc', 'August 2006', 'August 2007')
 			ul
 				li Integrated Lawson accounting system and Concur expense reporting system.
 				li Wrote an auto-dialer application with a user-friendly ASP.NET/Javascript UI.
 				li Learned C# and worked with CSLA business objects.
 				li Integrated accounting information between Made2Manage ERP and Lawson Accounting Software.
-		+exp('IT Field Support', 'Aaron Rents, Inc', 'September 2005', 'August 2006')
+		+exp('exp2', 'IT Field Support', 'Aaron Rents, Inc', 'September 2005', 'August 2006')
 			ul
 				li Re-imaged store servers and workstations using Norton Ghost. 
 				li Configured servers and workstations with DNS, DHCP, WINS, etc. 
 				li Automated my job by creating a VBA script. 
 				li Automated the job of my coworkers by upgrading the VBA script to VB.NET. 
 				li Took part in an ERP implementation, including translating data from the old data source to the new.
-		+exp('Acquisitions Auditor', 'Aaron Rents, Inc', 'September 2004', 'September 2005')
+		+exp('exp1', 'Acquisitions Auditor', 'Aaron Rents, Inc', 'September 2004', 'September 2005')
 			ul
 				li Led multiple acquisitions, converting data from the old POS system to the Aaron Rents POS system.
 				li Audited Aaron Rents store locations for compliance and risk management. 
 				li Began efforts to automate portions of the process, including the creation of acquisitions documents. 
 
-	+h('Additional Experience')
+	+h('addlexp', 'Additional Experience')
 		i Founder/Designer/Developer, Muxica; July 2012-July 2014
 		p Designed and developed an iPhone music app that was highly used in the visually impaired community. 
 		br/
 		i Founder/President, Houston F# Users Group; April 2009-December 2009
 		p Marketed and led the F# Users group in conjunction with the local Microsoft Developer Evangelist. 
 
-	+h('Awards/Recognition')
+	+h('awards', 'Awards/Recognition')
 		i Microsoft MVP (C#) 2010-2011
 		p
 		i MCTS: .NET Framework 2.0 Web Applications
 
-	+h('Education')
+	+h('education', 'Education')
 		p Texas A&M University - Bachelors degree in Psychology with a minor in Philosophy - 1997-2001
 
-	+h('References')
+	+h('refs', 'References')
 		p Available upon request.
 
-
+	
 
 
 

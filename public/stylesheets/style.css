@@ -37,5 +37,9 @@ p {
 	margin:2px;
 }
 .sectionContent { 
-	padding-left:20px;
+	padding-left:10px;
+}
+
+.section{
+	padding-left:10px;
 }
