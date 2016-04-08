@@ -8,7 +8,8 @@ mixin skill(type, values)
 mixin h(id, text)
 	.section
 		div
-			h2(data-toggle='collapse', data-target='##{id}', href='##{id}') #{text}
+			h2
+				p.pointer(data-toggle='collapse', data-target='##{id}', href='##{id}') #{text}
 		.sectionContent.collapse(id='#{id}')
 			block
 
@@ -16,7 +17,7 @@ mixin h(id, text)
 mixin exp(id, title, company, startdate, enddate)
 	.experience
 		h3
-			p(data-toggle='collapse', data-target='##{id}', href='##{id}') #{title}, #{company}; #{startdate}-#{enddate}
+			p.pointer(data-toggle='collapse', data-target='##{id}', href='##{id}') #{title}, #{company}; #{startdate}-#{enddate}
 		.experienceDetails.collapse(id='#{id}')
 			block
 
@@ -25,7 +26,8 @@ block content
 		include ../public/javascripts/foot.js
 		
 	h1
-		p David Morton, Software Developer 
+		p David Morton
+		p Software Developer 
 		p 713-422-3448
 		p 
 			a(href='mailto:david@isamorton.com') david@isamorton.com
@@ -135,8 +137,3 @@ block content
 
 	+h('refs', 'References')
 		p Available upon request.
-
-	
-
-
-

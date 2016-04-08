@@ -10,6 +10,7 @@ a {
 h1 {
 	font-size: 20px;
 	text-transform: uppercase;
+	margin-top:0px;
 }
 
 h1 p { 
@@ -33,6 +34,15 @@ ul {
 	padding-left:30px;
 }
 
+li { 
+	margin-bottom:3px;
+}
+
+.pointer {
+	cursor:pointer;
+	display:inline-block;
+	margin:0px;
+}
 p {
 	margin:2px;
 }
@@ -42,4 +52,25 @@ p {
 
 .section{
 	padding-left:10px;
+}
+
+.skill {
+	padding-bottom:5px;
+}
+
+@media (max-width: 500px) {
+    .container {
+      padding:0;
+      margin:0;
+    }
+
+    body {
+      padding:10px;
+    }
+
+    .navbar-fixed-top, .navbar-fixed-bottom, .navbar-static-top {
+      margin-left: 0;
+      margin-right: 0;
+      margin-bottom:0;
+    }
 }
