@@ -18,8 +18,8 @@ mixin exp(id, title, company, startdate, enddate)
 	.experience
 		div.pointer.collapsed.jobtitle(data-toggle='collapse', data-target='##{id}', href='##{id}', style='clear:both;display:inline-block;width:100%')
 			div
-				p.alignleft.expander #{title}, #{company} 
-			p.alignright #{startdate}-#{enddate}
+				p.alignleft.expander.role #{title}, #{company} 
+			p.alignright.role #{startdate}-#{enddate}
 		.experienceDetails.collapse(id='#{id}')
 			block
 
@@ -29,7 +29,7 @@ block content
 		
 	h1
 		p David Morton
-		p Software Developer (Developer)
+		p Software Developer
 		p 713-422-3448
 		p 
 			a(href='mailto:david@isamorton.com') Email
