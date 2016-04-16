@@ -2,4 +2,9 @@ version: 0.0
 os: linux
 files:
   - source: /
-    destination: /www/app/current
+    destination: /var/app/current
+hooks:
+  BeforeInstall:
+    - location: scripts/delete-directory.sh
+      timeout: 300
+      runas: root
