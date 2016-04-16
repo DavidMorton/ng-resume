@@ -147,6 +147,9 @@ p {
 }
 
 @media (max-width: 700px) {
+	html, body {
+		background-color:#F8F8F8;
+	}
 	ul { 
 		margin-top:3px;
 		padding-left:15px;
@@ -181,16 +184,19 @@ p {
 
 	.outerWrapper {
 		padding:0px;
+		height:initial;
 	}
 	.wrapper {
 		padding:15px;
 		margin:0px;
+		height:initial;
 		width:100%;
 		overflow:initial;
 		height:100%;
 	}
     .innerWrapper {
       margin:0px;
+      height:initial;
       overflow:initial;
       padding:10px;
     }
