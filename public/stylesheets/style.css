@@ -186,10 +186,12 @@ p {
 		padding:15px;
 		margin:0px;
 		width:100%;
+		overflow:initial;
 		height:100%;
 	}
     .innerWrapper {
       margin:0px;
+      overflow:initial;
       padding:10px;
     }
 
