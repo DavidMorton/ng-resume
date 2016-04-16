@@ -156,6 +156,9 @@ p {
 		padding-left:15px;
 	}
 
+	h1 {
+		margin-top:0px;
+	}
 	h1 p {
 		font-size:18px;
 	}
