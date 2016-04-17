@@ -6,7 +6,7 @@ html, body {
 
 .outerWrapper {
 	text-align:center;
-	height:100
+	height:100%;
 	padding:0px 0px;
 }
 
@@ -17,7 +17,7 @@ html, body {
 
 .body-content {
 	padding-top:10px;
-	box-shadow:-15px 0px 10px -15px #444444 inset;
+	
 }
 
 .body-content:before {
@@ -40,6 +40,7 @@ html, body {
 	color:#3E3E3E;
 	background-color:#F8F8F8;
 	overflow:auto;
+	box-shadow:-15px 0px 10px -15px #444444 inset;
 	font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
 }
 
@@ -203,7 +204,7 @@ p {
 		padding-left:15px;
 	}
 
-	.body-content, .body-content:before {
+	.body-content:before {
 		box-shadow:initial;
 	}
 
@@ -261,6 +262,7 @@ p {
 		width:100%;
 		overflow:initial;
 		height:100%;
+		box-shadow: initial;
 	}
     .innerWrapper {
       margin:0px;
