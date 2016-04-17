@@ -11,6 +11,10 @@ html, body {
 }
 
 
+.spacer {
+	height:110px;
+}
+
 .wrapper 
 {
 	max-width:850px;
@@ -40,8 +44,19 @@ a {
 .links {
 	font-size:16px;
 }
+
 p.role {
 	font-size:16px;
+}
+
+h1 {
+	width:85%;
+	max-width:800px;
+	position:fixed;
+	background-color:#F8F8F8;
+	margin-top:-50px;
+	padding-bottom:20px;
+	padding-top:60px;
 }
 
 h1 p {
@@ -140,28 +155,43 @@ p {
 	padding-bottom:5px;
 }
 
-@media (min-width: 908px) {
+@media (min-width: 900px) {
 	h1 p {
 		font-size: 24px; 
 	}
+
 	.wrapper {
 		width:900px;
 	}
 }
 
+@media (max-width:900px) {
+	h1 {
+		width:72%;
+	}
+}
+
 @media (max-width: 700px) {
+
+	.spacer {
+		height:30vw;
+	}
+
 	html, body {
 		background-color:#F8F8F8;
 		height:initial;
 	}
+
 	ul { 
 		margin-top:3px;
 		padding-left:15px;
 	}
 
 	h1 {
+		width:100%;
 		margin-top:0px;
 	}
+
 	h1 p {
 		font-size:6vw;
 	}
@@ -197,7 +227,7 @@ p {
 		height:initial;
 	}
 	.wrapper {
-		padding:15px;
+		padding:0px 15px;
 		margin:0px;
 		height:initial;
 		width:100%;
