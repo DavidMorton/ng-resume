@@ -68,14 +68,11 @@ p.role {
 h1 {
 	width:85%;
 	max-width:850px;
-	box-shadow: 0px 3px 10px #888888;
+	box-shadow: 0px 3px 5px #888888;
 	position:fixed;
 	background-color:#F8F8F8;
 	margin-top:-50px;
 	padding:70px 20px 20px 20px;
-	border-bottom-style:solid;
-	border-bottom-width:1px;
-	border-bottom-color:black;
 }
 
 h1 p, .fontSpacer {
