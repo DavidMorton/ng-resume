@@ -1,3 +1,3 @@
 $(document).ready(function() { 
-	$('#profile').collapse('toggle');
+	$('#profile, #skills, #exp').collapse('toggle');
 })

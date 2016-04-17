@@ -163,7 +163,7 @@ p {
 		margin-top:0px;
 	}
 	h1 p {
-		font-size:18px;
+		font-size:6vw;
 	}
 
 	h2 p {
@@ -184,6 +184,9 @@ p {
 		font-size:12px;
 	}
 
+	.links {
+		font-size:3.7vw;
+	}
 	div.experienceDetails ul li {
 		margin:0px 0px 10px 0px;
 	}
