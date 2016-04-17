@@ -12,7 +12,7 @@ html, body {
 
 
 .spacer {
-	height:136px;
+	height:150px;
 }
 
 .body-content {
@@ -25,7 +25,7 @@ html, body {
     content: " ";
     height: 100%;
     position: fixed;
-    top: 127px;
+    top: 150px;
     width: 20px;
     margin-left: -20px
 }
@@ -59,10 +59,15 @@ a {
 
 .links {
 	font-size:20px;
+	font-weight:normal;
 }
 
 p.role {
 	font-size:16px;
+}
+
+div.experienceDetails ul li {
+	margin:0px 0px 10px 0px;
 }
 
 h1 {
@@ -84,6 +89,7 @@ h1 p, .fontSpacer {
 
 p, li {
 	font-size:14px;
+	text-align:justify;
 }
 
 h2 {
@@ -146,7 +152,7 @@ p {
 
 .section{
 	padding-left:20px;
-	padding-right:20px;
+	padding-right:40px;
 }
 
 .section .expander:before {
@@ -187,7 +193,7 @@ p {
 @media (max-width: 700px) {
 
 	.spacer {
-		height:27vw;
+		height:100px;
 		max-height:initial;
 	}
 
@@ -207,7 +213,7 @@ p {
 
 	.section{
 		padding-left:10px;
-		padding-right:10px;
+		padding-right:20px;
 	}
 
 	h1 {
@@ -218,7 +224,7 @@ p {
 	}
 
 	h1 p {
-		font-size:6vw;
+		font-size:20px;
 	}
 
 	h2 p {
@@ -241,10 +247,7 @@ p {
 	}
 
 	.links {
-		font-size:3.7vw;
-	}
-	div.experienceDetails ul li {
-		margin:0px 0px 10px 0px;
+		font-size:12px;
 	}
 
 
