@@ -12,7 +12,22 @@ html, body {
 
 
 .spacer {
-	height:15vw;
+	height:136px;
+}
+
+.body-content {
+	padding-top:10px;
+	box-shadow:-15px 0px 10px -15px #444444 inset;
+}
+
+.body-content:before {
+	box-shadow: 3px 10px 3px 0px #AAAAAA;
+    content: " ";
+    height: 100%;
+    position: fixed;
+    top: 127px;
+    width: 20px;
+    margin-left: -20px
 }
 
 .wrapper 
@@ -42,7 +57,7 @@ a {
 }
 
 .links {
-	font-size:2vw;
+	font-size:20px;
 }
 
 p.role {
@@ -52,12 +67,10 @@ p.role {
 h1 {
 	width:85%;
 	max-width:850px;
-	box-shadow: 0px 2px 5px #888888;
+	box-shadow: 0px 3px 10px #888888;
 	position:fixed;
 	background-color:#F8F8F8;
 	margin-top:-50px;
-	/*margin-left:-40px;
-	margin-right:-40px;*/
 	padding:70px 20px 20px 20px;
 	border-bottom-style:solid;
 	border-bottom-width:1px;
@@ -65,7 +78,7 @@ h1 {
 }
 
 h1 p, .fontSpacer {
-	font-size: 2.7vw;
+	font-size: 24px;
 	text-transform: uppercase;
 	font-weight: bold;
 	margin:0px;
@@ -176,7 +189,7 @@ p {
 @media (max-width: 700px) {
 
 	.spacer {
-		height:25vw;
+		height:27vw;
 		max-height:initial;
 	}
 
@@ -190,9 +203,13 @@ p {
 		padding-left:15px;
 	}
 
+	.body-content, .body-content:before {
+		box-shadow:initial;
+	}
+
 	.section{
-		padding-left:5px;
-		padding-right:5px;
+		padding-left:10px;
+		padding-right:10px;
 	}
 
 	h1 {
@@ -218,6 +235,7 @@ p {
 	p.alignright.role {
 		font-size:12px;
 		font-weight: normal;
+		padding-bottom:3px;
 	}
 
 	p, li {
