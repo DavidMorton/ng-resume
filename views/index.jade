@@ -2,7 +2,7 @@ extends layout
 
 mixin skill(type, values)
 	p.skill
-		i= type + ' '
+		b= type + ' '
 		span= values
 
 mixin h(id, text)
@@ -30,15 +30,15 @@ block content
 	h1
 		p David Morton
 		p Software Developer
-		p 713-422-3448
-		p 
+		p.links 713-422-3448
+		p.links 
 			a(href='mailto:david@isamorton.com') Email
 			|  | 
-			a(href='https://www.linkedin.com/in/davidmmorton') LinkedIn
+			a(href='https://www.linkedin.com/in/davidmmorton', target='_blank') LinkedIn
 			|  | 
-			a(href='https://github.com/DavidMorton') GitHub
+			a(href='https://github.com/DavidMorton', target='_blank') GitHub
 			|  | 
-			a(href='http://stackoverflow.com/users/45916/david-morton') StackOverflow
+			a(href='http://stackoverflow.com/users/45916/david-morton', target='_blank') StackOverflow
 
 	
 	+h('profile', 'About Me')
