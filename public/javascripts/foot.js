@@ -20,7 +20,7 @@ function ScrollToElement(jqElement) {
 	}
 	scrollElement.animate({
     	scrollTop: result
-	}, 400, 'easeOutBounce');
+	}, 400, 'easeOutCirc');
 }
 
 function OnCollapse(e) {
