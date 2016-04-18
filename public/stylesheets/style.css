@@ -1,7 +1,6 @@
 html, body {
 	background-color:#C8C8C8;
 	height:100%;
-	margin:0;
 	font: 14px "Lucida Grande", Helvetica, Arial, sans-serif !important;
 }
 
@@ -48,15 +47,6 @@ html, body {
 	overflow:auto;
 	text-align:initial;
 	box-shadow:-15px 0px 10px -15px #444444 inset;
-}
-
-.innerWrapper {
-	overflow:auto;
-	position:relative;
-	display:block;
-	text-align:initial;
-	max-width:850px;
-    height:100%;
 }
 
 a {
@@ -218,7 +208,7 @@ p {
 */
 
 @media print {
-	.outerWrapper, .wrapper, .innerWrapper {
+	.outerWrapper, .wrapper {
 		all:initial;
 		font-family: "Lucida Grande", Helvetica, Arial, sans-serif;
 	}
@@ -367,11 +357,6 @@ p {
 	#about-section {
 		display:none;
 	}
-
-/*	.wrapper, .innerWrapper {
-		width: 100%;
-		max-width:initial;
-	}*/
 }
 
 @media screen and (max-width: 850px) {
@@ -391,6 +376,9 @@ p {
 		padding-left:15px;
 	}
 
+	.body-content {
+		padding:10px;
+	}
 	.body-content:before {
 		box-shadow:initial;
 	}
@@ -460,13 +448,6 @@ p {
 		height:100%;
 		box-shadow: initial;
 	}
-
-    .innerWrapper {
-      margin:0px;
-      height:initial;
-      overflow:initial;
-      padding:10px;
-    }
 
     .container {
       padding:0;
