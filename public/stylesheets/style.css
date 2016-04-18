@@ -75,6 +75,7 @@ div.experienceDetails ul li {
 }
 
 h1 {
+
 	width:85%;
 	max-width:850px;
 	box-shadow: 0px 3px 5px #888888;
@@ -223,7 +224,8 @@ p {
 
 	h1 {
 		width:100%;
-		margin-top:0px;
+		margin-top:-10px;
+		margin-left:-10px;
 		padding:10px;
 		box-shadow: 0px 2px 5px #888888
 	}
