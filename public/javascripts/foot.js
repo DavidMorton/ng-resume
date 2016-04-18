@@ -6,7 +6,7 @@ function ScrollToElement(jqElement) {
 	
 	var scrollElement = null;
 
-	if ($(window).width() >= 700) {
+	if ($(window).width() >= 850) {
 		var scrollElement = $('.innerWrapper');
 
 		var currentScroll = scrollElement.scrollTop();

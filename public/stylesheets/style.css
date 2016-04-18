@@ -306,6 +306,7 @@ p {
 
 	p, li {
 		font-size:12px;
+		text-align:left;
 	}
 
 	p.role {
@@ -356,7 +357,7 @@ p {
 	}*/
 }
 
-@media screen and (max-width: 700px) {
+@media screen and (max-width: 850px) {
 
 	.spacer {
 		height:100px;
@@ -402,12 +403,15 @@ p {
 
 	p.alignleft.role {
 	  font-size:14px;
+	  text-align:left !important;
 	}
 
 	p.alignright.role {
 		font-size:12px;
 		font-weight: normal;
 		padding-bottom:3px;
+		text-align:left !important;
+		margin-left:1px;
 	}
 
 	p, li {
@@ -460,8 +464,6 @@ p {
 		margin:0px;
 		padding-top:0px;
 		padding-bottom:10px;
-		padding-left:18px;
-		text-indent:-19px;
 	}
 
 	.alignright:before {
