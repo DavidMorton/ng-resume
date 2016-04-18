@@ -7,7 +7,7 @@ function ScrollToElement(jqElement) {
 	var scrollElement = null;
 
 	if ($(window).width() >= 850) {
-		var scrollElement = $('.innerWrapper');
+		var scrollElement = $('.wrapper');
 
 		var currentScroll = scrollElement.scrollTop();
 
@@ -29,7 +29,7 @@ function OnCollapse(e) {
 
 	if (collapsedTarget.hasClass('section')) {
 		ScrollToElement($('.body-content'));
-		
+
 		$('.sectionContent, .experienceDetails').off('show.bs.collapse');
 		$('#profile').collapse('show');
 		$('.sectionContent, .experienceDetails').on('show.bs.collapse', OnShow);
