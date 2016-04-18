@@ -6,7 +6,7 @@ mixin skill(type, values)
 		span= values
 
 mixin h(id, text)
-	.section
+	.section(id='#{id}-section')
 		div
 			h2
 				p.expander.pointer.collapsed(data-toggle='collapse', data-target='##{id}', href='##{id}') #{text}
@@ -28,8 +28,12 @@ block content
 		include ../public/javascripts/foot.js
 		
 	h1
-		p David Morton
-		p Software Developer
+		div(id='nameOccupation')
+			p(id='davidMorton') David Morton
+			p(id='occupation') Software Developer
+		p.print 713-422-3448
+		p.print david@isamorton.com
+		p.print http://resume.isamorton.com/
 		p.links 713-422-3448
 		p.links 
 			a(href='mailto:david@isamorton.com') Email
@@ -134,22 +138,24 @@ block content
 					li Began efforts to automate portions of the process, including the creation of acquisitions documents. 
 
 		+h('addlexp', 'Additional Activities')
-			i Founder/Designer/Developer, Muxica; July 2012-July 2014
+			p
+				i Founder/Designer/Developer, Muxica; July 2012-July 2014
 			p Designed and developed an iPhone music app that was highly used in the visually impaired community. 
-			br/
-			i Founder/President, Houston F# Users Group; April 2009-December 2009
+			p &nbsp;
+			p
+				i Founder/President, Houston F# Users Group; April 2009-December 2009
 			p Marketed and led the F# Users group in conjunction with the local Microsoft Developer Evangelist. 
 
 		+h('awards', 'Awards and Certifications')
-			i Microsoft MVP (C#) 2010-2011
-			br/
-			br/
-			i MCTS: .NET Framework 2.0 Web Applications
+			p
+				i Microsoft MVP (C#) 2010-2011
+			p
+				i MCTS: .NET Framework 2.0 Web Applications
 
 		+h('education', 'Education')
 			p Texas A&M University - Bachelors degree in Psychology with a minor in Philosophy - 1997-2001
 
 		+h('about', 'About This Resume')
-			p This resume was written in Jade, with flourishes courtesy of Bootstrap.js, and continuously deployed to AWS via GitHub.  The layout, design and programming are mine. 
+			p This resume was written in Jade, with flourishes courtesy of Bootstrap.js, and continuously deployed to AWS via GitHub.  The layout, design and programming are mine.  For a hard copy with everything visible, try printing!
 
 		.footer

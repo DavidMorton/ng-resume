@@ -2,6 +2,7 @@ html, body {
 	background-color:#C8C8C8;
 	height:100%;
 	margin:0;
+	font: 14px "Lucida Grande", Helvetica, Arial, sans-serif !important;
 }
 
 .outerWrapper {
@@ -45,7 +46,6 @@ html, body {
 	background-color:#F8F8F8;
 	overflow:auto;
 	box-shadow:-15px 0px 10px -15px #444444 inset;
-	font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
 }
 
 .innerWrapper {
@@ -185,6 +185,15 @@ p {
 	padding-bottom:5px;
 }
 
+.print {
+	text-transform: none;
+	font-size:15px;
+	margin:0px;
+	padding:0px;
+	font-weight:normal;
+	display:none;
+}
+
 /*@media (min-width: 900px) {
 	h1 p {
 		font-size: 24px; 
@@ -197,7 +206,131 @@ p {
 */
 /*@media (max-width:900px) {
 */
-@media (max-width: 700px) {
+
+@media print {
+	.outerWrapper, .wrapper, .innerWrapper {
+		all:initial;
+		font-family: "Lucida Grande", Helvetica, Arial, sans-serif;
+	}
+
+	* {
+		transition:none!important;
+	  	position:relative !important;
+	}
+
+	#davidMorton {
+		float:left;
+	}
+	#occupation {
+		float:right;
+		display:none;
+	}
+	#nameOccupation { 
+		display:inline-block;
+		width:100%;
+	}
+	script, style { 
+	    display:none; 
+	}
+
+	h1 {
+		position:relative !important;
+		margin:0px;
+		padding:0px;
+		width:100%;
+		max-width: initial;
+	}
+
+	.print {
+		display:block;
+		margin-top:2px;
+	}
+
+	.links {
+		display:none;
+	}
+	.spacer {
+		display:none;
+	}
+
+	.expander:before {
+		display:none;
+	}
+
+	.section {
+		padding:0px;
+		margin:0px;
+	}
+
+	.collapse {
+		display:table;
+	}
+
+	.skill {
+		padding-bottom:0px;
+	}
+
+	div.experienceDetails ul li {
+    	margin: initial;
+	}
+
+	.sectionContent {
+		padding-left:0px;
+		width:100%;
+	}
+
+	ul {
+		padding-left:13px;
+	}
+
+/*	.wrapper, .innerWrapper, .innerInnerWrapper {
+		overflow: initial;
+	}*/
+
+	.footer {
+		display:none;
+	}
+
+	p, li {
+		font-size:10px;
+	}
+
+	p.role {
+		font-size:14px;
+	}
+
+	h2 p {
+		font-size:16px;
+	}
+
+	.body-content {
+		padding:0px;
+		margin:0px;
+	}
+
+	.body-content:before {
+		display:none;
+		visibility:hidden;
+		margin-left:0px;
+		width:0px;
+	}
+
+
+	.experience {
+		width:100%;
+		page-break-inside: avoid;
+	}
+
+	#about-section {
+		display:none;
+	}
+/*	.wrapper, .innerWrapper {
+		width: 100%;
+		max-width:initial;
+	}*/
+}
+
+@media screen and (max-width: 700px) {
 
 	.spacer {
 		height:100px;
