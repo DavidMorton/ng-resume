@@ -291,7 +291,7 @@ p {
 		page-break-inside:avoid;
 	}
 
-	#exp { 
+	#exp-section { 
 		page-break-inside:initial;
 	}
 
