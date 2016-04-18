@@ -148,6 +148,9 @@ p {
 
 .jobtitle {
 	font-weight:bold;
+	clear:both;
+	display:inline-block;
+	width:100%
 }
 
 .pointer {
@@ -186,14 +189,14 @@ p {
 }
 
 .print {
-	text-transform: none;
-	font-size:15px;
 	margin:0px;
 	padding:0px;
-	font-weight:normal;
 	display:none;
 }
 
+.skillCategory {
+	font-weight:bold;
+}
 /*@media (min-width: 900px) {
 	h1 p {
 		font-size: 24px; 
@@ -216,19 +219,24 @@ p {
 	* {
 		transition:none!important;
 	  	position:relative !important;
+	  	padding:0px !important;
+	  	margin:0px !important;
 	}
 
 	#davidMorton {
-		float:left;
+		display:inline-block;
 	}
+
+	.skillCategory {
+		font-weight:normal;
+		font-style:italic;
+	}
+
 	#occupation {
 		float:right;
 		display:none;
 	}
-	#nameOccupation { 
-		display:inline-block;
-		width:100%;
-	}
+
 	script, style { 
 	    display:none; 
 	}
@@ -239,11 +247,16 @@ p {
 		padding:0px;
 		width:100%;
 		max-width: initial;
+		font-size:16px;
+	}
+
+	h1 p {
+		font-size:12px;
 	}
 
 	.print {
-		display:block;
-		margin-top:2px;
+		font-size:12px;
+		display:inline-block;
 	}
 
 	.links {
@@ -280,7 +293,7 @@ p {
 	}
 
 	ul {
-		padding-left:13px;
+		padding-left:20px !important;
 	}
 
 /*	.wrapper, .innerWrapper, .innerInnerWrapper {
@@ -292,15 +305,15 @@ p {
 	}
 
 	p, li {
-		font-size:10px;
+		font-size:12px;
 	}
 
 	p.role {
-		font-size:14px;
+		font-size:12px;
 	}
 
 	h2 p {
-		font-size:16px;
+		font-size:12px;
 	}
 
 	.body-content {
@@ -316,14 +329,27 @@ p {
 	}
 
 
+	.jobTitle, .alignleft, .alignright { 
+		font-weight:normal !important;
+		font-style:italic !important;
+	}
+
+	.alignleft, .alignright { 
+		font-weight:normal;
+		font-style:italic;
+	}
+
 	.experience {
 		width:100%;
 		page-break-inside: avoid;
+		padding-left:0px;
+		margin-bottom:10px !important;
 	}
 
 	#about-section {
 		display:none;
 	}
+
 /*	.wrapper, .innerWrapper {
 		width: 100%;
 		max-width:initial;
@@ -352,7 +378,7 @@ p {
 	}
 
 	.section{
-		padding-left:10px;
+		padding-left:0px;
 		padding-right:20px;
 	}
 
@@ -361,6 +387,7 @@ p {
 		margin-top:-10px;
 		margin-left:-10px;
 		padding:10px;
+
 		box-shadow: 0px 2px 5px #888888
 	}
 

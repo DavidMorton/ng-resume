@@ -2,7 +2,7 @@ extends layout
 
 mixin skill(type, values)
 	p.skill
-		b= type + ' '
+		span.skillCategory #{type}&nbsp;
 		span= values
 
 mixin h(id, text)
@@ -16,9 +16,9 @@ mixin h(id, text)
 
 mixin exp(id, title, company, startdate, enddate)
 	.experience
-		div.pointer.collapsed.jobtitle(data-toggle='collapse', data-target='##{id}', href='##{id}', style='clear:both;display:inline-block;width:100%')
+		div.pointer.collapsed.jobtitle(data-toggle='collapse', data-target='##{id}', href='##{id}')
 			div
-				p.alignleft.expander.role #{title}, #{company} 
+				p.alignleft.expander.role #{title}, #{company}
 			p.alignright.role #{startdate}-#{enddate}
 		.experienceDetails.collapse(id='#{id}')
 			block
@@ -28,12 +28,9 @@ block content
 		include ../public/javascripts/foot.js
 		
 	h1
-		div(id='nameOccupation')
-			p(id='davidMorton') David Morton
-			p(id='occupation') Software Developer
-		p.print 713-422-3448
-		p.print david@isamorton.com
-		p.print http://resume.isamorton.com/
+		p(id='davidMorton') David Morton
+		p(id='occupation') Software Developer
+		p.print , Software Developer - 713-422-3448 - david@isamorton.com
 		p.links 713-422-3448
 		p.links 
 			a(href='mailto:david@isamorton.com') Email
@@ -52,7 +49,8 @@ block content
 	
 	.body-content
 		+h('profile', 'About Me')
-			p(style='margin-bottom:15px;') I don't merely write code; I deliver solutions.
+			p I don't merely write code; I deliver solutions.
+			p &nbsp;
 			p I’m a passionate, insightful and effective software developer with over 10 years of creative problem-solving in C# and .NET. and a deep understanding of SOLID principles, dependency injection and TDD. 
 
 		+h('skills', 'Technical Skills')
@@ -156,6 +154,8 @@ block content
 			p Texas A&M University - Bachelors degree in Psychology with a minor in Philosophy - 1997-2001
 
 		+h('about', 'About This Resume')
-			p This resume was written in Jade, with flourishes courtesy of Bootstrap.js, and continuously deployed to AWS via GitHub.  The layout, design and programming are mine.  For a hard copy with everything visible, try printing!
+			p This resume was written in Jade, with flourishes courtesy of Bootstrap.js, and continuously deployed to AWS via GitHub.  The layout, design and programming are mine.  This site is print-friendly for those of you who like paper. 
+			p &nbsp;
+			p :)
 
 		.footer
