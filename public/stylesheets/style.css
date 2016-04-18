@@ -63,6 +63,7 @@ a {
 
 .links {
 	font-size:20px;
+	padding-top:10px;
 	font-weight:normal;
 }
 
@@ -255,6 +256,7 @@ p {
 
 	.links {
 		font-size:12px;
+		padding-top:6px;
 	}
 
 
