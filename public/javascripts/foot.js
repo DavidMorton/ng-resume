@@ -1,4 +1,6 @@
 function ScrollToElement(jqElement) {
+
+
 	var currentPosition = jqElement.offset().top;
 
 	var h1Height = $('h1').outerHeight();
@@ -16,10 +18,9 @@ function ScrollToElement(jqElement) {
 
 		var result = currentPosition - h1Height;
 	}
-
 	scrollElement.animate({
     	scrollTop: result
-	}, 200);
+	}, 400, 'easeOutBounce');
 }
 
 function OnCollapse(e) {
