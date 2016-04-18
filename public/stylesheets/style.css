@@ -51,7 +51,7 @@ html, body {
 .innerWrapper {
 	overflow:auto;
 	position:relative;
-	display:table-row;
+	display:block;
 	text-align:initial;
 	max-width:850px;
     height:100%;
@@ -260,6 +260,7 @@ p {
 		padding:0px;
 		height:initial;
 	}
+
 	.wrapper {
 		padding:0px 0px;
 		margin:0px;
@@ -269,6 +270,7 @@ p {
 		height:100%;
 		box-shadow: initial;
 	}
+
     .innerWrapper {
       margin:0px;
       height:initial;
