@@ -11,7 +11,7 @@ html, body {
 	padding:0px 0px;
 }
 
-#profile-print-section { 
+#profile-print-section, #about-print-section, #references-section { 
 	display:none; 
 }
 
@@ -227,7 +227,7 @@ p {
 		display:none;
 	}
 
-	#profile-print-section { 
+	#profile-print-section, #about-print-section, #references-section { 
 		display:block; 
 	}
 
