@@ -29,6 +29,10 @@ function OnCollapse(e) {
 
 	if (collapsedTarget.hasClass('section')) {
 		ScrollToElement($('.body-content'));
+		
+		$('.sectionContent, .experienceDetails').off('show.bs.collapse');
+		$('#profile').collapse('show');
+		$('.sectionContent, .experienceDetails').on('show.bs.collapse', OnShow);
 	} else {
 		ScrollToElement($('#exp').closest('.section'));
 	}

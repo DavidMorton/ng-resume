@@ -11,6 +11,9 @@ html, body {
 	padding:0px 0px;
 }
 
+#profile-print-section { 
+	display:none; 
+}
 
 .spacer {
 	height:150px;
@@ -220,6 +223,14 @@ p {
 		font-family: "Lucida Grande", Helvetica, Arial, sans-serif;
 	}
 
+	#profile-section {
+		display:none;
+	}
+
+	#profile-print-section { 
+		display:block; 
+	}
+
 	* {
 		transition:none!important;
 	  	position:relative !important;
@@ -299,10 +310,6 @@ p {
 	ul {
 		padding-left:20px !important;
 	}
-
-/*	.wrapper, .innerWrapper, .innerInnerWrapper {
-		overflow: initial;
-	}*/
 
 	.footer {
 		display:none;
