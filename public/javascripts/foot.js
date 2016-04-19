@@ -2,7 +2,7 @@ function ScrollToElement(jqElement) {
 
 	var currentPosition = jqElement.offset().top;
 
-	var h1Height = $('h1').outerHeight();
+	var h1Height = $('div.header').outerHeight();
 	
 	var scrollElement = null;
 

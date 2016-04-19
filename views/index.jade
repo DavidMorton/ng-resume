@@ -23,27 +23,32 @@ mixin exp(id, title, company, startdate, enddate)
 		.experienceDetails.collapse(id='#{id}')
 			block
 
+mixin header()
+	div.header&attributes(attributes)
+		h1
+			p(id='davidMorton') David Morton
+			p(id='occupation') Software Developer
+			p.print , Software Developer - 713-422-3448 - david@isamorton.com
+			p.links.screen 713-422-3448
+			p.links.screen
+				a(href='mailto:david@isamorton.com') Email
+				|  | 
+				a(href='https://www.linkedin.com/in/davidmmorton', target='_blank') LinkedIn
+				|  | 
+				a(href='https://github.com/DavidMorton', target='_blank') GitHub
+				|  | 
+				a(href='http://stackoverflow.com/users/45916/david-morton?tab=profile', target='_blank') StackOverflow
+
 block content
 	script
 		include ../public/javascripts/foot.js
 		
-	h1.header
-		p(id='davidMorton') David Morton
-		p(id='occupation') Software Developer
-		p.print , Software Developer - 713-422-3448 - david@isamorton.com
-		p.links.screen 713-422-3448
-		p.links.screen
-			a(href='mailto:david@isamorton.com') Email
-			|  | 
-			a(href='https://www.linkedin.com/in/davidmmorton', target='_blank') LinkedIn
-			|  | 
-			a(href='https://github.com/DavidMorton', target='_blank') GitHub
-			|  | 
-			a(href='http://stackoverflow.com/users/45916/david-morton?tab=profile', target='_blank') StackOverflow
-
-	.spacer.screen
+	+header()
 	
 	.body-content
+		div.screen(style='visibility:hidden')
+			+header()
+
 		+h('profile', 'About Me')(class='screen')
 			p I don't merely write code; I deliver solutions.
 			p &nbsp;

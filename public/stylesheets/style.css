@@ -6,6 +6,14 @@ html, body {
 	padding:0px 0px;
 }
 
+h1 
+{
+	margin: 0px;
+}
+
+.screen .header {
+	position:relative;
+}
 .wrapper, .header 
 { 
 	background-color: #F8F8F8;
@@ -15,6 +23,7 @@ html, body {
 
 .header, .body-content {
 	padding:20px;
+	margin-top:0px;
 }
 
 .header {
@@ -22,6 +31,12 @@ html, body {
 	position:fixed;
 	margin-top:0px;
 	padding:20px 20px 20px 20px;
+}
+
+.links {
+	font-size:20px;
+	padding-top:10px;
+	font-weight:normal;
 }
 
 .wrapper 
@@ -60,16 +75,10 @@ html, body {
     margin-left: -40px
 }
 
-
 a {
 	color: #00B7FF;
 }
 
-.links {
-	font-size:20px;
-	padding-top:10px;
-	font-weight:normal;
-}
 
 p.role {
 	font-size:16px;
@@ -79,8 +88,7 @@ div.experienceDetails ul li {
 	margin:0px 0px 10px 0px;
 }
 
-
-h1 p, .fontSpacer {
+h1 p {
 	font-size: 24px;
 	text-transform: uppercase;
 	font-weight: bold;
@@ -344,8 +352,8 @@ p {
 		width:100%;
 	}
 
-	.header, .body-content {
-		padding:10px;
+	h1, .header, .body-content {
+		padding:0px;
 	}
 
 	.spacer {
