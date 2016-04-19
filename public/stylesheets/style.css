@@ -25,6 +25,11 @@ h1
 	position:fixed;
 	width:100%;
 }
+
+.fake.header {
+	visibility:hidden;
+}
+
 .header, .body-content {
 	padding:20px;
 	margin-top:0px;
