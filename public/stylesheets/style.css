@@ -78,7 +78,6 @@ a {
 	color: #00B7FF;
 }
 
-
 p.role {
 	font-size:16px;
 }
@@ -204,6 +203,9 @@ p {
 }
 
 @media print {
+	.header {
+		text-transform:uppercase;
+	}
 	.wrapper {
 		all:initial;
 		font-family: "Lucida Grande", Helvetica, Arial, sans-serif;
