@@ -6,7 +6,7 @@ mixin skill(type, values)
 		span= values
 
 mixin h(id, text)
-	.section(id='#{id}-section')
+	.section(id='#{id}-section')&attributes(attributes)
 		div
 			h2
 				p.expander.pointer.collapsed(data-toggle='collapse', data-target='##{id}', href='##{id}') #{text}
@@ -27,12 +27,12 @@ block content
 	script
 		include ../public/javascripts/foot.js
 		
-	h1
+	h1.header
 		p(id='davidMorton') David Morton
 		p(id='occupation') Software Developer
 		p.print , Software Developer - 713-422-3448 - david@isamorton.com
-		p.links 713-422-3448
-		p.links 
+		p.links.screen 713-422-3448
+		p.links.screen
 			a(href='mailto:david@isamorton.com') Email
 			|  | 
 			a(href='https://www.linkedin.com/in/davidmmorton', target='_blank') LinkedIn
@@ -41,19 +41,15 @@ block content
 			|  | 
 			a(href='http://stackoverflow.com/users/45916/david-morton?tab=profile', target='_blank') StackOverflow
 
-	.spacer
-		p.fontSpacer &nbsp;
-		p.fontSpacer &nbsp;
-		p.links &nbsp;
-		p.links &nbsp;
+	.spacer.screen
 	
 	.body-content
-		+h('profile', 'About Me')
+		+h('profile', 'About Me')(class='screen')
 			p I don't merely write code; I deliver solutions.
 			p &nbsp;
 			p I’m a passionate, insightful and effective software developer with over 10 years of creative problem-solving in C# and .NET. and a deep understanding of SOLID principles, dependency injection and TDD. 
 
-		+h('profile-print', 'Profile')
+		+h('profile-print', 'Profile')(class='print')
 			p I don't merely write code; I deliver solutions.
 			p &nbsp;
 			p I’m a passionate, insightful and effective software developer with over 10 years of creative problem-solving in C# and .NET. and a deep understanding of SOLID principles, dependency injection and TDD. 
@@ -158,15 +154,15 @@ block content
 		+h('education', 'Education')
 			p Texas A&M University - Bachelors degree in Psychology with a minor in Philosophy - 1997-2001
 
-		+h('references', 'References')
+		+h('references', 'References')(class='print')
 			p Available upon request.
 
-		+h('about', 'About This Resume')
+		+h('about', 'About This Resume')(class='screen')
 			p This resume was written in Jade, with flourishes courtesy of Bootstrap.js, and continuously deployed to AWS via GitHub.  The layout, design and programming are mine.  This site is print-friendly for those of you who like paper. 
 			p &nbsp;
 			p :)
 
-		+h('about-print', 'About This Resume')
+		+h('about-print', 'About This Resume')(class='print')
 			p This resume was not written in Word. It's a combination of HTML, written in Jade, Bootstrap.js, and JQuery. 
 			p &nbsp;
 			p If you want the latest version, you can find it at http://resume.isamorton.com/. The site us auto-deployed to AWS via Github, and uses responsive CSS to format the document so it looks like what you're seeing right now. 

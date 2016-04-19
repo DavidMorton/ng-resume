@@ -6,7 +6,35 @@ html, body {
 	padding:0px 0px;
 }
 
-#profile-print-section, #about-print-section, #references-section { 
+.wrapper, .header 
+{ 
+	background-color: #F8F8F8;
+	width:85%;
+	max-width:850px;
+}
+
+.header, .body-content {
+	padding:20px;
+}
+
+.header {
+	box-shadow: 0px 3px 5px #888888;
+	position:fixed;
+	margin-top:0px;
+	padding:20px 20px 20px 20px;
+}
+
+.wrapper 
+{
+	display:inline-block;
+	height:100%;
+	color:#3E3E3E;
+	overflow:auto;
+	text-align:initial;
+	box-shadow:-15px 0px 10px -15px #444444 inset;
+}
+
+.print { 
 	display:none; 
 }
 
@@ -27,23 +55,11 @@ html, body {
     content: " ";
     height: 100%;
     position: fixed;
-    top: 150px;
+    top: 147px;
     width: 20px;
-    margin-left: -20px
+    margin-left: -40px
 }
 
-.wrapper 
-{
-	max-width:850px;
-	display:inline-block;
-	height:100%;
-	width:85%;
-	color:#3E3E3E;
-	background-color:#F8F8F8;
-	overflow:auto;
-	text-align:initial;
-	box-shadow:-15px 0px 10px -15px #444444 inset;
-}
 
 a {
 	color: #00B7FF;
@@ -63,16 +79,6 @@ div.experienceDetails ul li {
 	margin:0px 0px 10px 0px;
 }
 
-h1 {
-
-	width:85%;
-	max-width:850px;
-	box-shadow: 0px 3px 5px #888888;
-	position:fixed;
-	background-color:#F8F8F8;
-	margin-top:0px;
-	padding:20px 20px 20px 20px;
-}
 
 h1 p, .fontSpacer {
 	font-size: 24px;
@@ -149,8 +155,8 @@ p {
 }
 
 .section{
-	padding-left:40px;
-	padding-right:40px;
+	padding-left:20px;
+	padding-right:20px;
 }
 
 .section .expander:before {
@@ -190,18 +196,6 @@ p {
 .skillCategory {
 	font-weight:bold;
 }
-/*@media (min-width: 900px) {
-	h1 p {
-		font-size: 24px; 
-	}
-
-	.wrapper {
-		width:900px;
-	}
-}
-*/
-/*@media (max-width:900px) {
-*/
 
 @media print {
 	.wrapper {
@@ -209,12 +203,12 @@ p {
 		font-family: "Lucida Grande", Helvetica, Arial, sans-serif;
 	}
 
-	#profile-section {
+	.screen {
 		display:none;
 	}
 
-	#profile-print-section, #about-print-section, #references-section { 
-		display:block; 
+	.print { 
+		display:inline-block; 
 	}
 
 	* {
@@ -222,6 +216,7 @@ p {
 	  	position:relative !important;
 	  	padding:0px !important;
 	  	margin:0px !important;
+	  	font-size:12px !important;
 	}
 
 	#davidMorton {
@@ -248,21 +243,8 @@ p {
 		padding:0px;
 		width:100%;
 		max-width: initial;
-		font-size:16px;
 	}
 
-	h1 p {
-		font-size:12px;
-	}
-
-	.print {
-		font-size:12px;
-		display:inline-block;
-	}
-
-	.links {
-		display:none;
-	}
 	.spacer {
 		display:none;
 	}
@@ -272,7 +254,7 @@ p {
 	}
 
 	.section {
-		padding:0px;
+		padding:16px 0px 0px 0px !important;
 		margin:0px;
 		page-break-inside:avoid;
 	}
@@ -357,6 +339,15 @@ p {
 
 @media screen and (max-width: 850px) {
 
+	.wrapper, .header 
+	{
+		width:100%;
+	}
+
+	.header, .body-content {
+		padding:10px;
+	}
+
 	.spacer {
 		height:100px;
 		max-height:initial;
@@ -375,6 +366,7 @@ p {
 	.body-content {
 		padding:10px;
 	}
+
 	.body-content:before {
 		box-shadow:initial;
 	}
@@ -387,7 +379,7 @@ p {
 	.experience {
 		margin-left:10px;
 	}
-	
+
 	h1 {
 		width:100%;
 		padding:10px;
