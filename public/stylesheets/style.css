@@ -2,7 +2,7 @@ html, body {
 	background-color:#C8C8C8;
 	height:100%;
 	margin:0;
-	font: 14px "Lucida Grande", Helvetica, Arial, sans-serif !important;
+	//font: 14px "Lucida Grande", Helvetica, Arial, sans-serif !important;
 }
 
 .outerWrapper {
@@ -32,7 +32,7 @@ html, body {
     content: " ";
     height: 100%;
     position: fixed;
-    top: 150px;
+    top: 137px;
     width: 20px;
     margin-left: -20px
 }
@@ -45,7 +45,7 @@ html, body {
 	height:100%;
 	width:85%;
 	color:#3E3E3E;
-	background-color:#F8F8F8;
+	background-color:white;
 	overflow:auto;
 	box-shadow:-15px 0px 10px -15px #444444 inset;
 }
@@ -64,7 +64,7 @@ a {
 }
 
 .links {
-	font-size:20px;
+	font-size:16px;
 	padding-top:10px;
 	font-weight:normal;
 }
@@ -83,14 +83,14 @@ h1 {
 	max-width:850px;
 	box-shadow: 0px 3px 5px #888888;
 	position:fixed;
-	background-color:#F8F8F8;
+	background-color:white;
 	margin-top:0px;
 	padding:20px 20px 20px 20px;
 }
 
 h1 p, .fontSpacer {
 	font-size: 24px;
-	text-transform: uppercase;
+	/*text-transform: uppercase;*/
 	font-weight: bold;
 	margin:0px;
 }
@@ -126,7 +126,7 @@ li {
 }
 
 p {
-	margin:2px;
+	margin:5px;
 }
 
 .alignleft {
