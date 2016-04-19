@@ -6,19 +6,20 @@ html, body {
 	padding:0px 0px;
 }
 
-h1 
-{
-	margin: 0px;
-}
-
 .screen .header {
 	position:relative;
 }
+
 .wrapper, .header 
 { 
 	background-color: #F8F8F8;
 	width:85%;
 	max-width:850px;
+}
+
+h1 
+{
+	margin: 0px;
 }
 
 .header, .body-content {
@@ -51,10 +52,6 @@ h1
 
 .print { 
 	display:none; 
-}
-
-.spacer {
-	height:150px;
 }
 
 .body-content {
@@ -253,10 +250,6 @@ p {
 		max-width: initial;
 	}
 
-	.spacer {
-		display:none;
-	}
-
 	.expander:before {
 		display:none;
 	}
@@ -321,7 +314,6 @@ p {
 		width:0px;
 	}
 
-
 	.jobTitle, .alignleft, .alignright { 
 		font-weight:normal !important;
 		font-style:italic !important;
@@ -337,11 +329,6 @@ p {
 		page-break-inside: avoid;
 		padding-left:0px;
 		margin-bottom:10px !important;
-	}
-
-
-	#about-section {
-		display:none;
 	}
 }
 
