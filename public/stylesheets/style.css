@@ -1,7 +1,6 @@
 html, body {
 	background-color:#C8C8C8;
 	height:100%;
-	font: 14px "Lucida Grande", Helvetica, Arial, sans-serif !important;
 	text-align:center;
 	padding:0px 0px;
 }
@@ -22,6 +21,10 @@ h1
 	margin: 0px;
 }
 
+.fixedHeader {
+	position:fixed;
+	width:100%;
+}
 .header, .body-content {
 	padding:20px;
 	margin-top:0px;
@@ -29,7 +32,6 @@ h1
 
 .header {
 	box-shadow: 0px 3px 5px #888888;
-	position:fixed;
 	margin-top:0px;
 	padding:20px 20px 20px 20px;
 }
@@ -87,7 +89,6 @@ div.experienceDetails ul li {
 
 h1 p {
 	font-size: 24px;
-	text-transform: uppercase;
 	font-weight: bold;
 	margin:0px;
 }
@@ -123,7 +124,7 @@ li {
 }
 
 p {
-	margin:2px;
+	margin:10px 2px;
 }
 
 .alignleft {
