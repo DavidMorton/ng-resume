@@ -66,16 +66,14 @@ function OnShown(e) {
 
 	$('#profile').off('shown.bs.collapse');
 
-	$('.sectionContent, .experienceDetails').on('show.bs.collapse', OnShow);
 }
 
 $(document).ready(function() { 
 	ScrollToElement($('.body-content'));
 
-	$('#profile').collapse('toggle');
+	$('#profile').collapse('show');
 
-	$('#profile').on('shown.bs.collapse', OnShown);
-
+	$('.sectionContent, .experienceDetails').on('show.bs.collapse', OnShow);
 	$('.sectionContent, .experienceDetails').on('hide.bs.collapse', OnCollapse);
 });
 

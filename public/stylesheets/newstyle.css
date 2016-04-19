@@ -22,6 +22,10 @@ html, body {
 	padding-right:20px;
 }
 
+.pointer:hover {
+	text-decoration: underline;
+}
+
 .wrapper {
 	width:100%;
 }
@@ -41,7 +45,7 @@ body, .real.header, .body-content {
 .body-content {
 	width:100%;
 	max-width:850px;
-	padding-bottom:300px;
+	padding-bottom:500px;
 }
 
 /*.fake.header { visibility:hidden; }*/
@@ -50,4 +54,21 @@ body, .real.header, .body-content {
 div {
 	margin:0px;
 	padding:0px;
+}
+
+.jobtitle {
+	width:100%;
+	display:inline-block;
+}
+
+.role {
+	display:block;
+}
+
+.alignright {
+	float:right;
+}
+
+.alignleft { 
+	float:left;
 }

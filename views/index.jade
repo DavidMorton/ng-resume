@@ -16,9 +16,8 @@ mixin h(id, text)
 
 mixin exp(id, title, company, startdate, enddate)
 	.experience
-		div.pointer.collapsed.jobtitle(data-toggle='collapse', data-target='##{id}', href='##{id}')
-			div
-				p.alignleft.expander.role #{title}, #{company}
+		div.pointer.collapsed.jobtitle.h4(data-toggle='collapse', data-target='##{id}', href='##{id}')
+			p.alignleft.expander.role #{title}, #{company}
 			p.alignright.role #{startdate}-#{enddate}
 		.experienceDetails.collapse(id='#{id}')
 			block
@@ -29,8 +28,8 @@ mixin header()
 			p(id='davidMorton') David Morton
 			p(id='occupation') Software Developer
 			p.print , Software Developer - 713-422-3448 - david@isamorton.com
-			p.links.screen 713-422-3448
-			p.links.screen
+			p.links.screen.h4 713-422-3448
+			p.links.screen.h4
 				a(href='mailto:david@isamorton.com') Email
 				|  | 
 				a(href='https://www.linkedin.com/in/davidmmorton', target='_blank') LinkedIn
