@@ -331,16 +331,15 @@ p {
 		box-shadow:initial;
 	}
 
+	.sectionContent {
+		padding-left:0px;
+	}
 	.section{
 		padding:10px 20px 0px 0px;
 	}
 
 	.experience {
-		margin-left:10px;
-	}
-
-	h1 {
-
+		margin-left:15px;
 	}
 
 	h1 p {
