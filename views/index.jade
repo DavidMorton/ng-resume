@@ -37,7 +37,7 @@ block content
 
 			+h('skills', 'Technical Skills')
 				p.skill(ng-repeat="skill in Skills")
-					span.skillCategory {{skill.Category + "&nbsp;"}}
+					span.skillCategory {{skill.Category + ":&nbsp;"}}
 					span= "{{skill.Values.join(', ')}}"
 			
 			+h('exp', 'Experience')
