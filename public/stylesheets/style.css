@@ -67,6 +67,7 @@ p { font-size:14px; }
 
 .body-content {
 	padding:10px 40px 800px 40px;
+	white-space: pre-wrap;
 }
 
 	.body-content:before {
@@ -214,6 +215,7 @@ p {
 		padding:16px 0px 0px 0px !important;
 		margin:0px;
 		page-break-inside:avoid;
+		width:100%;
 	}
 
 	#exp-section { 

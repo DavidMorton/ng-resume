@@ -1,9 +1,5 @@
 extends layout
 
-mixin skill(type, values)
-	p.skill
-		span.skillCategory #{type}&nbsp;
-		span= values
 
 mixin h(id, text)
 	.section(id='#{id}-section')&attributes(attributes)
@@ -12,161 +8,67 @@ mixin h(id, text)
 		.sectionContent.collapse(id='#{id}')
 			block
 
-
-mixin exp(id, title, company, startdate, enddate)
-	.experience
-		div.pointer.collapsed.jobtitle(data-toggle='collapse', data-target='##{id}', href='##{id}')
-			p.alignleft.expander.role #{title}, #{company}
-			p.alignright.role #{startdate}-#{enddate}
-		.experienceDetails.collapse(id='#{id}')
-			block
-
 mixin header()
 	div.header&attributes(attributes)
-		h1(id='davidMorton') David Morton
-		h1(id='occupation') Software Developer
-		h1.print , Software Developer - 713-422-3448 - david@isamorton.com
-		h1.links.screen 713-422-3448
+		h1(id='davidMorton') {{Name}}
+		h1(id='occupation') {{Occupation}}
+		h1.print , {{Occupation}} - {{Phone}} - {{Email}}
+		h1.links.screen {{Phone}}
 		h1.links.screen
-			a(href='mailto:david@isamorton.com') Email
-			|  | 
-			a(href='https://www.linkedin.com/in/davidmmorton', target='_blank') LinkedIn
-			|  | 
-			a(href='https://github.com/DavidMorton', target='_blank') GitHub
-			|  | 
-			a(href='http://stackoverflow.com/users/45916/david-morton?tab=profile', target='_blank') StackOverflow
+			span(ng-repeat="link in Links")
+				a(href='{{link.Address}}') {{link.Name}}
+				| {{$last ? '' : ' | '}}
 
 block content
-	script
-		include ../public/javascripts/foot.js
-		
-	+header()(class='real')
+	.context(ng-controller="resumeController")
+		script
+			include ../public/javascripts/foot.js
+			
+		+header()(class='real')
 
-	+header()(class='fake screen')
+		+header()(class='fake screen')
 
-	.body-content
-		
+		.body-content
+			+h('profile', 'About Me')(class='screen')
+				{{Profile}}
 
-		+h('profile', 'About Me')(class='screen')
-			p I don't merely write code; I deliver solutions.
-			p I’m a passionate, insightful and effective software developer with over 10 years of creative problem-solving in C# and .NET. and a deep understanding of SOLID principles, dependency injection and TDD. 
+			+h('profile-print', 'Profile')(class='print')
+				{{Profile}}
 
-		+h('profile-print', 'Profile')(class='print')
-			p I don't merely write code; I deliver solutions.
-			p I’m a passionate, insightful and effective software developer with over 10 years of creative problem-solving in C# and .NET. and a deep understanding of SOLID principles, dependency injection and TDD. 
+			+h('skills', 'Technical Skills')
+				p.skill(ng-repeat="skill in Skills")
+					span.skillCategory {{skill.Category + "&nbsp;"}}
+					span= "{{skill.Values.join(', ')}}"
+			
+			+h('exp', 'Experience')
+				.experience(ng-repeat="position in Experience")
+					div.pointer.collapsed.jobtitle(data-toggle='collapse', data-target='#exp{{$index}}', href='#exp{{$index}}')
+						p.alignleft.expander.role {{position.Title}}, {{position.Company}}
+						p.alignright.role {{position.StartDate}}-{{position.EndDate}}
+					.experienceDetails.collapse(id='exp{{$index}}')
+						ul
+							li(ng-repeat="highlight in position.Achievements") {{highlight}}
 
-		+h('skills', 'Technical Skills')
-			+skill('Languages:', 'C#, Javascript, HTML, CSS, XAML, Objective-C, F#')
-			+skill('Frameworks:', '.NET, Jquery, Node.js, Entity Framework, WPF, WCF, ASP.NET, NUnit, WinForms, VSTO')
-			+skill('Databases:', 'SQL Server, Oracle, SQL Server Compact')
-			+skill('Techniques:', 'SOLID, TDD, Dependency Injection, Functional Programming, MVC, MVVM')
-			+skill('Environments:', 'Visual Studio, Xcode')
-			+skill('Other:', 'Git, ReSharper, Debugging via decompiling')
+			+h('addlexp', 'Additional Activities')
+				p(ng-repeat="activity in AdditionalExperience")
+					i {{activity.Title}}
+					br/
+					| {{activity.Description}}
 
-		+h('exp', 'Experience')
-			+exp('exp10', 'Associate Team Lead', 'JPMorgan Chase & Co.', 'January 2015', 'Present')
-				ul
-					li Responsible for the output of an agile team of five developers.
-					li Managed a VSTO application with a WPF UI, and a backend on Server 2013 with 19 WCF Services.
-					li Onboarded 27 independent components onto continuous integration and deployment.
-					li Reduced coupling between reusable assemblies, dividing them into independent NuGet packages.
-					li Linked automated TeamCity builds with a proprietary deployment system.
-					li Organized the team to be self-sustaining by introducing peer code reviewing requirements. 
-					li Developed small, high impact applications, deployed on over 17,000 desktops across the enterprise.
-					li Wrote Powershell scripts to standardize deployments. 
+			+h('awards', 'Awards and Certifications')
+				p(ng-repeat="award in Awards")
+					i {{award}}
 
-			+exp('exp9', 'Associate Developer', 'JPMorgan Chase & Co.', 'August 2013', 'January 2015')
-				ul
-					li Designed and implemented a greenfield VSTO application with a WPF UI with over 1500 unit tests.
-					li Designed a framework for 33 advanced PowerPoint charting types with custom formats.
-					li Defined and presented on the best practices for a proprietary deployment system.
-					li Worked heavily with, and developed a testable framework around COM Interop objects.
-					li Integrated the front-end application with WCF services providing data from a Mongo database.
-					li Led the team in story points completed, and number of lines of code written.
-					li Trained the team in dependency injection and Test Driven Development best practices.
-					li Worked in an Agile/SCRUM team using Atlasssian JIRA for issue management.
-			+exp('exp8', 'Senior Developer', 'LiquidFrameworks, LLC.', 'July 2010', 'August 2013')
-				ul
-					li Maintained and developed a disconnected WPF application using SQL Server Compact. 
-					li Transitioned the flagship product from a site-installed product to a cloud-based product. 
-					li Implemented several bits of functionality in SalesForce cloud. 
-					li Developed integration layers for Quickbooks, MAS90, Peachtree, and GreatPlains.
-					li Implemented NHibernate, Castle Windsor and an object proxy system for the flagship app. 
-					li Developed two tie-in iOS applications using Objective-C. 
-					li Used ProtoBuf serialization to replace SQL Server replication, speeding up sync 500-fold. 
-					li Designed and implemented, from the ground up, an entire survey tool, along with 145 unit tests.
-			+exp('exp7', 'Senior Developer','SolArc, Inc.','March 2010','July 2010')
-				ul
-					li Designed and implemented a report editing component for RightAngle, a commodities trading software. 
-					li Worked with a large-scale commodities trading platform written in WinForms and C#. 
-					li Converted portions of a PowerBuilder application into C#. 
-					li Designed a document editing system using Windows Workflow Foundation and DevExpress tools. 
-			+exp('exp6', 'Senior Consultant', 'Catapult Systems', 'August 2008', 'March 2010')
-				ul
-					li Designed, implemented and presented on an MVVM implementation in Silverlight 3. 
-					li Helped Catapult Systems, a Microsoft NSI, become thought leaders in the community. 
-					li Developed an ASP.NET MVC 2 application for an aviation insurance company.
-					li Refactored a data-driven ASP.NET project to conform to SOLID principles.
-					li Led various presentations on new technologies, including Jquery. 
-					li Worked for the Houston Texans for a short period of time maintaining their internal applications.  
-			+exp('exp5', 'Consultant', 'Catapult Systems', 'August 2007', 'August 2008')
-				ul
-					li Helped design and develop an ASP.NET project at a major air services provider in Houston.  
-					li Implemented JavaScript, Jquery and AJAX into ASP.NET when AJAX was brand new. 
-					li Implemented a WinForms application for a Florida court system using CAB and Infragistics controls.
-			+exp('exp4', 'Freelance Developer', 'Hyperactive Concepts', 'September 2006', 'June 2007')
-				ul
-					li Developed C#, ASP.NET and Javascript applications for clients. 
-					li Completed an administrative back-end in T-SQL for a computer training company.
-			+exp('exp3', 'IT Applications Developer', 'Aaron Rents, Inc', 'August 2006', 'August 2007')
-				ul
-					li Integrated Lawson accounting system and Concur expense reporting system.
-					li Wrote an auto-dialer application with a user-friendly ASP.NET/Javascript UI.
-					li Learned C# and worked with CSLA business objects.
-					li Integrated accounting information between Made2Manage ERP and Lawson Accounting Software.
-			+exp('exp2', 'IT Field Support', 'Aaron Rents, Inc', 'September 2005', 'August 2006')
-				ul
-					li Re-imaged store servers and workstations using Norton Ghost. 
-					li Configured servers and workstations with DNS, DHCP, WINS, etc. 
-					li Automated my job by creating a VBA script. 
-					li Automated the job of my coworkers by upgrading the VBA script to VB.NET. 
-					li Took part in an ERP implementation, including translating data from the old data source to the new.
-			+exp('exp1', 'Acquisitions Auditor', 'Aaron Rents, Inc', 'September 2004', 'September 2005')
-				ul
-					li Led multiple acquisitions, converting data from the old POS system to the Aaron Rents POS system.
-					li Audited Aaron Rents store locations for compliance and risk management. 
-					li Began efforts to automate portions of the process, including the creation of acquisitions documents. 
+			+h('education', 'Education')
+				p {{Education}}
 
-		+h('addlexp', 'Additional Activities')
-			p
-				i Founder/Designer/Developer, Muxica; July 2012-July 2014
-				br/
-				| Designed and developed an iPhone music app that was highly used in the visually impaired community. 
-			p
-				i Founder/President, Houston F# Users Group; April 2009-December 2009
-				br/
-				| Marketed and led the F# Users group in conjunction with the local Microsoft Developer Evangelist. 
+			+h('references', 'References')(class='print')
+				p {{References}}
 
-		+h('awards', 'Awards and Certifications')
-			p
-				i Microsoft MVP (C#) 2010-2011
-			p
-				i MCTS: .NET Framework 2.0 Web Applications
+			+h('about', 'About This Resume')(class='screen')
+				p {{About}}
 
-		+h('education', 'Education')
-			p Texas A&M University - Bachelors degree in Psychology with a minor in Philosophy - 1997-2001
+			+h('about-print', 'About This Resume')(class='print')
+				p {{AboutPrint}}
 
-		+h('references', 'References')(class='print')
-			p Available upon request.
-
-		+h('about', 'About This Resume')(class='screen')
-			p This resume was written in Jade, with flourishes courtesy of Bootstrap.js, and continuously deployed to AWS via GitHub.  The layout, design and programming are mine.  This site is print-friendly for those of you who like paper. 
-			p &nbsp;
-			p :)
-
-		+h('about-print', 'About This Resume')(class='print')
-			p This resume was not written in Word. It's a combination of HTML, written in Jade, Bootstrap.js, and JQuery. 
-			p &nbsp;
-			p If you want the latest version, you can find it at http://resume.isamorton.com/. The site us auto-deployed to AWS via Github, and uses responsive CSS to format the document so it looks like what you're seeing right now. 
-
-		.footer
+			.footer
