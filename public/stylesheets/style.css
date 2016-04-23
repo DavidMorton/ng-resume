@@ -409,10 +409,6 @@ p {
 		padding-bottom:10px;
 	}
 
-	.alignright:before {
-		content:"\A";
-	}
-
     .navbar-fixed-top, .navbar-fixed-bottom, .navbar-static-top {
       margin-left: 0;
       margin-right: 0;
