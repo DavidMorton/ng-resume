@@ -5,7 +5,7 @@ resumeApp.controller('resumeController', function($scope) {
     $scope.Occupation= "Software Developer";
     $scope.Email= "david@isamorton.com";
     $scope.Phone= "713-422-3448";
-    $scope.Profile = "I don't merely write code; I deliver solutions.\n\nI’m a passionate, insightful and effective software developer with over 10 years of creative problem-solving in C# and .NET. and a deep understanding of SOLID principles, dependency injection and TDD. ";
+    $scope.Profile = "I don't merely write code; I deliver solutions.\n\nI’m a passionate, insightful and effective software developer with over 10 years of creative problem-solving in C# and .NET, a deep understanding of SOLID principles, dependency injection, TDD and just starting Node.js.";
 
     $scope.Links=
         [{
