@@ -13,7 +13,7 @@ resumeApp.controller('resumeController', function($scope) {
             Address: "mailto://" + $scope.Email
         },
         {
-            Name: "Git", 
+            Name: "GitHub", 
             Address: "https://github.com/DavidMorton"
         }, 
         {
