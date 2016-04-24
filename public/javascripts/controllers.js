@@ -23,7 +23,11 @@ resumeApp.controller('resumeController', function($scope) {
         {
             Name: "StackOverflow", 
             Address: "http://stackoverflow.com/users/45916/david-morton?tab=profile"
-        }
+        },
+		{ 
+			Name: "Twitter", 
+			Address: "http://twitter.com/hellodmo"
+		}
 		];
     $scope.Skills = [
         { 
