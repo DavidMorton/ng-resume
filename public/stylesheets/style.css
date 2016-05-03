@@ -332,6 +332,7 @@ p {
 	html, body {
 		background-color:#F8F8F8;
 		height:initial;
+		font-size:12px;
 	}
 
 	ul { 
@@ -353,6 +354,10 @@ p {
 	.section{
 		padding:10px 20px 0px 0px;
 	}
+
+	.section .expander:before { 
+		width:15px;
+	 }
 
 	.experience {
 		margin-left:15px;
