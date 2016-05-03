@@ -1,0 +1,6 @@
+extends ../mixins/sectionheader
+
+block content
+	p.skill(ng-repeat="skill in skills")
+		span.skillCategory {{skill.category + ":&nbsp;"}}
+		span= "{{skill.values.join(', ')}}"

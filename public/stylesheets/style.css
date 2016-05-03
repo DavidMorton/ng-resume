@@ -209,6 +209,7 @@ p {
 
 	.expander:before {
 		display:none;
+		width:0px;
 	}
 
 	.section {
@@ -217,6 +218,10 @@ p {
 		page-break-inside:avoid;
 		width:100%;
 	}
+
+		.section h2 { 
+			margin-left:-4px !important;
+		}
 
 	#exp-section { 
 		page-break-inside:initial;

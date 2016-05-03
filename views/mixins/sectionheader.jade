@@ -1,0 +1,5 @@
+.section(id='{{contentId}}-section')
+	div 
+		h2.expander.pointer.collapsed(data-toggle='collapse', data-target='{{ "#" + contentId}}', href='{{ "#" + contentId }}') {{contentTitle}}
+	.sectionContent.collapse(id='{{contentId}}')
+		block content

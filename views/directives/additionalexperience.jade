@@ -1,0 +1,7 @@
+extends ../mixins/sectionheader
+
+block content
+	p(ng-repeat="activity in experiences")
+		i {{activity.title}}
+		br/
+		| {{activity.description}}

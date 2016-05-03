@@ -1,74 +1,20 @@
 extends layout
 
-
-mixin h(id, text)
-	.section(id='#{id}-section')&attributes(attributes)
-		div
-			h2.expander.pointer.collapsed(data-toggle='collapse', data-target='##{id}', href='##{id}') #{text}
-		.sectionContent.collapse(id='#{id}')
-			block
-
-mixin header()
-	div.header&attributes(attributes)
-		h1(id='davidMorton') {{Name}}
-		h1(id='occupation') {{Occupation}}
-		h1.print , {{Occupation}} - {{Phone}} - {{Email}}
-		h1.links.screen {{Phone}}
-		h1.links.screen
-			span(ng-repeat="link in Links")
-				a(href='{{link.Address}}') {{link.Name}}
-				| {{$last ? '' : ' | '}}
-
 block content
 	.context(ng-controller="resumeController")
-		script
-			include ../public/javascripts/foot.js
-			
-		+header()(class='real')
-
-		+header()(class='fake screen')
+		
+		header(class='header real')
+		header(class='header fake screen')
 
 		.body-content
-			+h('profile', 'About Me')(class='screen')
-				{{Profile}}
-
-			+h('profile-print', 'Profile')(class='print')
-				{{Profile}}
-
-			+h('skills', 'Technical Skills')
-				p.skill(ng-repeat="skill in Skills")
-					span.skillCategory {{skill.Category + ":&nbsp;"}}
-					span= "{{skill.Values.join(', ')}}"
-			
-			+h('exp', 'Experience')
-				.experience(ng-repeat="position in Experience")
-					div.pointer.collapsed.jobtitle(data-toggle='collapse', data-target='#exp{{$index}}', href='#exp{{$index}}')
-						p.alignleft.expander.role {{position.Title}}, {{position.Company}}
-						p.alignright.role {{position.StartDate}}-{{position.EndDate}}
-					.experienceDetails.collapse(id='exp{{$index}}')
-						ul
-							li(ng-repeat="highlight in position.Achievements") {{highlight}}
-
-			+h('addlexp', 'Additional Activities')
-				p(ng-repeat="activity in AdditionalExperience")
-					i {{activity.Title}}
-					br/
-					| {{activity.Description}}
-
-			+h('awards', 'Awards and Certifications')
-				p(ng-repeat="award in Awards")
-					i {{award}}
-
-			+h('education', 'Education')
-				p {{Education}}
-
-			+h('references', 'References')(class='print')
-				p {{References}}
-
-			+h('about', 'About This Resume')(class='screen')
-				p {{About}}
-
-			+h('about-print', 'About This Resume')(class='print')
-				p {{AboutPrint}}
-
+			text-content(content-id='profile', content-title='About Me', content-text='{{data.profile}}', class='screen')
+			text-content(content-id='profile-print', content-title='Profile', content-text='{{data.profile}}', class='print')
+			techskills(content-id='skills', content-title='Technical Skills', skills='data.skills')
+			experience(content-id='exp', content-title='Experience', experiences='data.experience')
+			additional-experience(content-id='addlexp', content-title='Additional Activities', experiences='data.additionalExperience')
+			awards(content-id='awards', content-title='Awards and Certifications', all-awards='data.awards')
+			text-content(content-id='education', content-title='Education', content-text='{{data.education}}')
+			text-content(content-id='references', content-title='References', content-text='{{data.references}}', class='print')
+			text-content(content-id='about', content-title='About This Resume', content-text='{{data.about}}', class='screen')
+			text-content(content-id='about-print', content-title='About This Resume', content-text='{{data.aboutPrint}}', class='print')
 			.footer

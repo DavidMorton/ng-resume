@@ -69,11 +69,6 @@ function OnShown(e) {
 }
 
 $(document).ready(function() { 
-	ScrollToElement($('.body-content'));
 
-	$('#profile').collapse('show');
-
-	$('.sectionContent, .experienceDetails').on('show.bs.collapse', OnShow);
-	$('.sectionContent, .experienceDetails').on('hide.bs.collapse', OnCollapse);
 });
 
