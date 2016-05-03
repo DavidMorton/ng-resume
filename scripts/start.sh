@@ -1,1 +1,1 @@
-nohup node ./bin/www &
+nohup node ./bin/www & 
