@@ -6,5 +6,5 @@ div.header
 		a(href='{{ "tel:+" + data.phone }}') {{data.phone}}
 	h1.links.screen
 		span(ng-repeat="link in data.links")
-			a(href='{{link.address}}') {{link.name}}
+			a(href='{{link.address}}', target='_blank') {{link.name}}
 			| {{$last ? '' : ' | '}}
