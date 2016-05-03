@@ -2,7 +2,8 @@ div.header
 	h1(id='davidMorton') {{data.name}}
 	h1(id='occupation') {{data.occupation}}
 	h1.print , {{data.occupation}} - {{data.phone}} - {{data.email}}
-	h1.links.screen 
+	h1.links.screen.largescreen {{data.phone}}
+	h1.links.screen.mobile
 		a(href='{{ "tel:+" + data.phone }}') {{data.phone}}
 	h1.links.screen
 		span(ng-repeat="link in data.links")

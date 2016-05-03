@@ -158,6 +158,9 @@ p {
 	font-style:italic;
 }
 
+.mobile { 
+	display:none;
+}
 
 @media print {
 	.header {
@@ -311,6 +314,14 @@ p {
 		width:100%;
 	}
 
+	.mobile { 
+		display:initial;
+	}
+
+	.largescreen { 
+		display:none;
+	}
+	
 	h1 { font-size:18px; }
 	h2 { font-size:16px; }
 	h3 { font-size:14px; }
