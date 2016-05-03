@@ -12,6 +12,8 @@ resumeApp.controller('resumeController', function($scope, $timeout, $http) {
         $timeout(function() { 
             $('.sectionContent, .experienceDetails').on('show.bs.collapse', OnShow);
             $('.sectionContent, .experienceDetails').on('hide.bs.collapse', OnCollapse);
+
+            $('.wrapper').fadeIn(500);
         });
     });
 });

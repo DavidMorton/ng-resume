@@ -65,7 +65,6 @@ function OnShown(e) {
 	e.stopPropagation();
 
 	$('#profile').off('shown.bs.collapse');
-
 }
 
 $(document).ready(function() { 
