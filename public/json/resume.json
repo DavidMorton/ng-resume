@@ -182,7 +182,7 @@
 
     "references": "Available upon request.",
 
-    "about": "This resume was written in Jade and Angular.js with flourishes courtesy of Bootstrap.js, and continuously deployed to AWS via GitHub.  The layout, design and programming are mine.  This site is print-friendly for those of you who like paper.\n\n:)",
+    "about": "This resume was written in Jade and Angular.js with flourishes courtesy of Bootstrap.js, and continuously deployed to AWS via GitHub (see above link).  The layout, design and programming are mine.  This site is print-friendly for those of you who like paper.\n\n:)",
 
     "aboutPrint": "This resume was not written in Word. It's a combination of HTML, Jade, Bootstrap.js, Angular.js and JQuery.\nIf you want the latest version, you can find it at http://resume.isamorton.com/. The site us auto-deployed to AWS via Github, running on Node.js and uses responsive CSS to format the document so it looks like what you're seeing right now. "
 }
