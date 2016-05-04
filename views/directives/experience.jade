@@ -2,9 +2,9 @@ extends ../mixins/sectionheader
 
 block content
 	.experience(ng-repeat="position in experiences")
-		div.pointer.collapsed.jobtitle(data-toggle='collapse', data-target='#exp{{$index}}', href='#exp{{$index}}')
+		div.pointer.collapsed.jobtitle(data-toggle='collapse', data-target='#exp{{experiences.length - $index}}', href='#exp{{experiences.length - $index}}')
 			p.alignleft.expander.role {{position.title}}, {{position.company}}
 			p.alignright.role {{position.startDate}}-{{position.endDate}}
-		.experienceDetails.collapse(id='exp{{$index}}')
+		.experienceDetails.collapse(id='exp{{experiences.length - $index}}')
 			ul
 				li(ng-repeat="highlight in position.achievements") {{highlight}}

@@ -1,23 +1,3 @@
-var resumeApp = angular.module('resumeApp', []);
-
-resumeApp.controller('resumeController', function($scope, $timeout, $http) {
-    $http.get('/json/resume.json')
-    .then(function(res) {
-        $scope.data = res.data;
-
-        ScrollToElement($('.body-content'));
-
-        $('#profile').collapse('show');
-
-        $timeout(function() { 
-            $('.sectionContent, .experienceDetails').on('show.bs.collapse', OnShow);
-            $('.sectionContent, .experienceDetails').on('hide.bs.collapse', OnCollapse);
-
-            $('.wrapper').fadeIn(500);
-        });
-    });
-});
-
 resumeApp.directive('experience', function() { return {
     templateUrl: '/directives/experience.html', 
     scope: { 
@@ -73,15 +53,3 @@ resumeApp.directive('textContent', function() { return {
     }, 
     replace: true
 }});
-
-
-
-
-
-
-
-
-
-
-
-
