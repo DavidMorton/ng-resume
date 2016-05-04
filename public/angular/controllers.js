@@ -1,7 +1,9 @@
-resumeApp.controller('resumeController', function($scope, $timeout, $http) {
+resumeApp.controller('resumeController', ['$scope', '$timeout', '$http', '$routeParams', function($scope, $timeout, $http, $routeParams) {
     $http.get('/json/resume.json')
     .then(function(res) {
         $scope.data = res.data;
+
+        console.log($routeParams);
 
         ScrollToElement($('.body-content'));
 
@@ -14,7 +16,7 @@ resumeApp.controller('resumeController', function($scope, $timeout, $http) {
             $('.wrapper').fadeIn(500);
         });
     });
-});
+}]);
 
 
 

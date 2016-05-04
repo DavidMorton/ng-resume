@@ -1,1 +1,1 @@
-var resumeApp = angular.module('resumeApp', []);
+var resumeApp = angular.module('resumeApp', ['ngRoute']);

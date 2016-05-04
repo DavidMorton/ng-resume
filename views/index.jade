@@ -1,20 +1,27 @@
-extends layout
+doctype html
+html(ng-app="resumeApp")
+  meta(name='robots', content='noindex, nofollow')
+  meta(name='googlebot', content='noindex, nofollow')
+  meta(name='viewport', content='width=device-width, initial-scale=1')
 
-block content
-	.context(ng-controller="resumeController")
-		
-		header(class='header real')
-		header(class='header fake screen')
+  head
+    title= title
+    link(rel='stylesheet', href='/stylesheets/bootstrap.min.css')    
+    link(rel='stylesheet', href='/stylesheets/style.css')
 
-		.body-content
-			text-content(content-id='profile', content-title='About Me', content-text='{{data.profile}}', class='screen')
-			text-content(content-id='profile-print', content-title='Profile', content-text='{{data.profile}}', class='print')
-			techskills(content-id='skills', content-title='Technical Skills', skills='data.skills')
-			experience(content-id='exp', content-title='Experience', experiences='data.experience')
-			additional-experience(content-id='addlexp', content-title='Additional Activities', experiences='data.additionalExperience')
-			awards(content-id='awards', content-title='Awards and Certifications', all-awards='data.awards')
-			text-content(content-id='education', content-title='Education', content-text='{{data.education}}')
-			text-content(content-id='references', content-title='References', content-text='{{data.references}}', class='print')
-			text-content(content-id='about', content-title='About This Resume', content-text='{{data.about}}', class='screen')
-			text-content(content-id='about-print', content-title='About This Resume', content-text='{{data.aboutPrint}}', class='print')
-			.footer
+    script(src="/javascripts/jquery-1.12.3.min.js")
+    script(src="/javascripts/transition.js")
+    script(src="/javascripts/collapse.js")
+    script(src="/javascripts/jquery-ui.min.js")
+    script(src="/javascripts/analytics.js")
+    script(src="/javascripts/angular.min.js")
+    script(src="/javascripts/angular-route.min.js")
+    script(src="/angular/app.js")
+    script(src="/angular/controllers.js")
+    script(src="/angular/directives.js")
+    script(src="/angular/routes.js")
+    script(src="/javascripts/foot.js")
+
+  body
+    .wrapper
+      ng-view

@@ -1,7 +1,7 @@
 extends ../mixins/sectionheader
 
 block content
-	.experience(ng-repeat="position in experiences")
+	.experience(ng-repeat="position in experiences", hash="#/exp/exp{{experiences.length - $index}}")
 		div.pointer.collapsed.jobtitle(data-toggle='collapse', data-target='#exp{{experiences.length - $index}}', href='#exp{{experiences.length - $index}}')
 			p.alignleft.expander.role {{position.title}}, {{position.company}}
 			p.alignright.role {{position.startDate}}-{{position.endDate}}

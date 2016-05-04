@@ -19,7 +19,7 @@ function ScrollToElement(jqElement) {
 	}
 	scrollElement.animate({
     	scrollTop: result
-	}, 400, 'easeOutCirc');
+	}, 500, 'easeOutCirc');
 }
 
 function OnCollapse(e) {
@@ -36,6 +36,10 @@ function OnCollapse(e) {
 	} else {
 		ScrollToElement($('#exp').closest('.section'));
 	}
+
+	var hash = $(e.currentTarget).closest('.section, .experience').attr('hash');
+
+	window.location.hash = hash.substring(0, hash.lastIndexOf('/'));
 }
 
 function OnShow(e) {
@@ -59,6 +63,8 @@ function OnShow(e) {
 
 		ScrollToElement($(e.currentTarget).closest('.experience, .section'));
 	});
+
+	window.location.hash = $(e.currentTarget).closest('.section, .experience').attr('hash');
 }
 
 function OnShown(e) {
