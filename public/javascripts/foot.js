@@ -1,5 +1,8 @@
 function ScrollToElement(jqElement) {
 
+	if (jqElement.length === 0) 
+		return;
+
 	var currentPosition = jqElement.offset().top;
 
 	var h1Height = $('div.header').outerHeight();
@@ -25,6 +28,7 @@ function ScrollToElement(jqElement) {
 function OnCollapse(e) {
 	e.stopPropagation();
 
+
 	var collapsedTarget = $(e.currentTarget).closest('.experience, .section');
 
 	if (collapsedTarget.hasClass('section')) {
@@ -45,25 +49,27 @@ function OnCollapse(e) {
 function OnShow(e) {
 	e.stopPropagation();
 
-	var elementToScrollTo = $(e.currentTarget).closest('.experience, .section');
+	// var elementToScrollTo = $(e.currentTarget).closest('.experience, .section');
 
-	$('.sectionContent, .experienceDetails').off('hide.bs.collapse');
+	// $('.sectionContent, .experienceDetails').off('hide.bs.collapse');
 
-	if (elementToScrollTo.hasClass('section')) {
-		$('.section .sectionContent').not($(e.currentTarget)).collapse('hide');
-	} else {
-		$('.experience .experienceDetails').not($(e.currentTarget)).collapse('hide');
-	}
+	// if (elementToScrollTo.hasClass('section')) {
+	// 	$('.section .sectionContent').not($(e.currentTarget)).collapse('hide');
+	// } else {
+	// 	$('.experience .experienceDetails').not($(e.currentTarget)).collapse('hide');
+	// }
 
-	$('.sectionContent, .experienceDetails').on('hide.bs.collapse', OnCollapse);
+	// $('.sectionContent, .experienceDetails').on('hide.bs.collapse', OnCollapse);
 
 
-	$(e.currentTarget).on('shown.bs.collapse', function(e) {
-		e.stopPropagation();
+	// $(e.currentTarget).on('shown.bs.collapse', function(e) {
+	// 	e.stopPropagation();
 
-		ScrollToElement($(e.currentTarget).closest('.experience, .section'));
-	});
+	// 	ScrollToElement($(e.currentTarget).closest('.experience, .section'));
+	// });
 
+	ScrollToElement($(e.currentTarget).closest('.experience, .section'));
+	
 	window.location.hash = $(e.currentTarget).closest('.section, .experience').attr('hash');
 }
 
