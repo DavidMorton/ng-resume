@@ -20,56 +20,56 @@ function ScrollToElement(jqElement) {
 
 		var result = currentPosition - h1Height;
 	}
+
 	scrollElement.animate({
     	scrollTop: result
-	}, 500, 'easeOutCirc');
+	}, 500, 'easeOutQuart');
 }
 
 function OnCollapse(e) {
 	e.stopPropagation();
 
+	console.log('Collapsing ' + e.currentTarget.id);
 
-	var collapsedTarget = $(e.currentTarget).closest('.experience, .section');
+	hash = window.location.hash;
 
-	if (collapsedTarget.hasClass('section')) {
-		ScrollToElement($('.body-content'));
-
-		$('.sectionContent, .experienceDetails').off('show.bs.collapse');
+	if ($('.sectionContent.collapse.in, .sectionContent.collapsing').length === 0) 
+	{
+		ScrollToElement($('#profile'));
 		$('#profile').collapse('show');
-		$('.sectionContent, .experienceDetails').on('show.bs.collapse', OnShow);
-	} else {
-		ScrollToElement($('#exp').closest('.section'));
+		window.location.hash = hash.substring(0, hash.lastIndexOf('/'));
+
+	} else if ($('#exp').hasClass('in') && $('#exp').find('.collapsing').length === 0)
+	{
+		ScrollToElement($('#exp-section'));
+		window.location.hash = hash.substring(0, hash.lastIndexOf('/'));
 	}
-
-	var hash = $(e.currentTarget).closest('.section, .experience').attr('hash');
-
-	window.location.hash = hash.substring(0, hash.lastIndexOf('/'));
 }
 
 function OnShow(e) {
 	e.stopPropagation();
 
-	// var elementToScrollTo = $(e.currentTarget).closest('.experience, .section');
+	$('.section, .experience').off('hidden.bs.collapse');
 
-	// $('.sectionContent, .experienceDetails').off('hide.bs.collapse');
+	console.log('Showing ' + e.currentTarget.id);
 
-	// if (elementToScrollTo.hasClass('section')) {
-	// 	$('.section .sectionContent').not($(e.currentTarget)).collapse('hide');
-	// } else {
-	// 	$('.experience .experienceDetails').not($(e.currentTarget)).collapse('hide');
-	// }
+	var closest = $(e.currentTarget).closest('.section, .experience');
 
-	// $('.sectionContent, .experienceDetails').on('hide.bs.collapse', OnCollapse);
+	if (closest.hasClass('section'))
+	{
+		$(e.currentTarget).find('.collapse.in').collapse('hide');
+		$('.sectionContent.collapse.in').not($(e.currentTarget)).collapse('hide');
+	} else {
+		$('.experienceDetails.collapse.in').not($(e.currentTarget)).collapse('hide');
+	}
 
+	$(e.currentTarget).on('shown.bs.collapse', function() {
+		$(e.currentTarget).off('shown.bs.collapse');
+		ScrollToElement(closest);
+	});
 
-	// $(e.currentTarget).on('shown.bs.collapse', function(e) {
-	// 	e.stopPropagation();
+	$('.sectionContent, .experienceDetails').on('hidden.bs.collapse');
 
-	// 	ScrollToElement($(e.currentTarget).closest('.experience, .section'));
-	// });
-
-	ScrollToElement($(e.currentTarget).closest('.experience, .section'));
-	
 	window.location.hash = $(e.currentTarget).closest('.section, .experience').attr('hash');
 }
 
@@ -78,8 +78,3 @@ function OnShown(e) {
 
 	$('#profile').off('shown.bs.collapse');
 }
-
-$(document).ready(function() { 
-
-});
-

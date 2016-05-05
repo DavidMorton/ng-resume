@@ -36,7 +36,6 @@ resumeApp.controller('resumeController', ['$scope', '$timeout', '$http', '$route
 
                 subsection.collapse('show');
 
-
             } else if (section.length) { 
 
                 section.on('shown.bs.collapse', function () { 
@@ -47,7 +46,7 @@ resumeApp.controller('resumeController', ['$scope', '$timeout', '$http', '$route
                 section.collapse('show');
             }
 
-            //$('.sectionContent, .experienceDetails').on('show.bs.collapse', OnShow);
+            $('.sectionContent, .experienceDetails').on('show.bs.collapse', OnShow);
             $('.sectionContent, .experienceDetails').on('hidden.bs.collapse', OnCollapse);
 
             $('.wrapper').fadeIn(500);
