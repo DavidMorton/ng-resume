@@ -52,11 +52,18 @@
             "values": ["Git", "ReSharper", "Debugging via decompiling"]
         }],
     "experience":
-        [ {
+        [{
+            "company": "Spot Traceability", 
+            "title": "Lead Software Developer", 
+            "startDate": "May 2016",
+            "endDate": "Present",
+            "achievements": []
+        },
+        {
             "company": "JPMorgan Chase & Co.", 
             "title": "Associate Team Lead", 
             "startDate": "January 2015", 
-            "endDate": "Present", 
+            "endDate": "May 2016", 
             "achievements": [ "Responsible for the output of an agile team of five developers.",
 				"Managed a VSTO application with a WPF UI, and a backend on Server 2013 with 19 WCF Services.",
 				"Onboarded 27 independent components onto continuous integration and deployment.",
