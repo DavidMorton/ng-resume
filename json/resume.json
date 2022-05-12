@@ -214,7 +214,7 @@
 
     "references": "Available upon request.",
 
-    "about": "This resume was written in Jade and Angular.js with flourishes courtesy of Bootstrap.js, running on Node.js (Express) and continuously deployed to AWS via GitHub (see above link). \n\nThe layout, design and programming are mine. This site is print-friendly for those of you who like paper.\n\n:)",
+    "about": "This is an older resume project that I put together in AngularJS. Yeah, it's old, but it still works!  The layout, design and programming are mine. This site is print-friendly for those of you who like paper.\n\n:)",
 
-    "aboutPrint": "This resume was not written in Word. It's a combination of HTML, Jade, Bootstrap.js, Angular.js and JQuery.\nIf you want the latest version, you can find it at http://resume.hellodmo.com/. The site us auto-deployed to AWS via Github, running on Node.js Express and uses responsive CSS to format the document so it looks like what you're seeing right now. "
+    "aboutPrint": "This resume is kept up to date at https://resume.hellodmo.com/"
 }

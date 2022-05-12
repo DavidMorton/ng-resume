@@ -1,4 +1,7 @@
-resumeApp.config(['$routeProvider', function($routeProvider) {
+resumeApp.config(['$routeProvider',//'$urlMatcherFactoryProvider', 
+function($routeProvider, /*$urlMatcherFactoryProvider*/) {
+	// $urlMatcherFactoryProvider.strictMode(false)
+
 	$routeProvider
 
 	.when('/', {
