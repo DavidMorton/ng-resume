@@ -76,6 +76,10 @@ resumeApp.controller('resumeController', ['$scope', '$timeout', '$http', '$route
             window.location.hash = $(e.currentTarget).closest('.section, .experience').attr('hash');
         };
 
+        $scope.togglePrint = function() {
+            $(document.body).toggleClass('printmode');
+        }
+
         $http.get('json/resume.json')
         .then(function(res) {
             $scope.data = res.data;
@@ -131,6 +135,8 @@ resumeApp.controller('resumeController', ['$scope', '$timeout', '$http', '$route
 
                 $('.sectionContent, .experienceDetails').on('show.bs.collapse', $scope.onShow);
                 $('.sectionContent, .experienceDetails').on('hidden.bs.collapse', $scope.onCollapse);
+
+                $('.printToggle').on('click', $scope.togglePrint);
 
                 $('.wrapper').fadeIn(500);
             });

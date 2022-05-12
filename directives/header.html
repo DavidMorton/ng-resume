@@ -6,4 +6,6 @@
   <h2 class="screen notmobile">{{data.phone}}</h2>
   <h1 class="links screen mobile"><a href="{{ &quot;tel:+&quot; + data.phone }}">{{data.phone}}</a></h1>
   <h2 class="links screen"><span ng-repeat="link in data.links"><a href="{{link.address}}" target="_blank">{{link.name}}</a>{{$last ? '' : ' | '}}</span></h2>
+  <span class="printToggle screen">Print View</span>
+  <span class="printToggle print">Dynamic View</span>
 </div>

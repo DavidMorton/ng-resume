@@ -6,9 +6,9 @@
   <div id="{{contentId}}" class="sectionContent collapse">
     <div ng-repeat="position in experiences" hash="#/exp/exp{{experiences.length - $index}}" class="experience">
       <div data-toggle="{{ position.achievements.length ? &quot;collapse&quot; : &quot;&quot; }}" data-target="#exp{{experiences.length - $index}}" href="{{ position.achievements.length ? (&quot;#exp&quot; + (experiences.length - $index)) : &quot;&quot; }}" ng-class="{true: 'pointer collapsed jobtitle', false: 'collapsed, jobtitle'}[position.achievements.length &gt; 0]">
-        <p ng-class="{true: &quot;alignleft expander role&quot;, false: &quot;alignleft role&quot;}[position.achievements.length &gt; 0]">{{position.title}}, {{position.company}}</p>
+        <p class="screen" ng-class="{true: &quot;alignleft expander role&quot;, false: &quot;alignleft role&quot;}[position.achievements.length &gt; 0]">{{position.title}}, {{position.company}}</p>
         <p class="alignright role screen">{{position.startDate}}-{{position.endDate}}</p>
-        <p style="font-weight:bold;" class="role print alignleft bold">, {{position.startDate}}-{{position.endDate}}</p>
+        <p style="font-weight:bold;" class="role print alignleft bold">{{position.title}}, {{position.company}}, {{position.startDate}}-{{position.endDate}}</p>
       </div>
       <div id="exp{{experiences.length - $index}}" class="experienceDetails collapse">
         <ul>

@@ -50,6 +50,10 @@ p { font-size:14px; }
 	margin-top:0px;
 	padding:10px 20px 10px 20px;
 	position:relative;
+
+	h2 {
+		margin-left: 0px;
+	}
 }
 
 	.real.header {
@@ -161,11 +165,18 @@ p {
 	display:none;
 }
 
-@media print {
+#printmode {
+	.sectionContent, .experienceDetails {
+		pointer-events: none;
+	}
+	
+	body {
+		background-color: white;
+	}
 	.header {
 		text-transform:uppercase;
-
-		box-shadow: 0px 2px 5px #888888
+		background-color: initial;
+		box-shadow: none !important;
 	}
 
 	h1, h2, h3 {
@@ -306,8 +317,63 @@ p {
 	}
 }
 
+@media print {
+	#printmode();
+
+	.printToggle {
+		display: none;
+	}
+}
+
+.printmode {
+	#printmode();
+
+	.context {
+		@media screen {
+			max-width: 8.5in;
+			padding: .25in !important;
+			background-color: white;
+		}
+		
+	}
+
+	.section .collapsed .expander:before {
+		display: none;
+	}
+	.printToggle {
+		right: 0px;
+		top: 0px;
+	}
+
+	.context {
+		background-color: white;
+	}
+
+	display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.printToggle {
+	position: absolute !important;
+	right: 7px;
+	top: 6px;
+	cursor: pointer;
+}
+
 @media screen and (max-width: 850px) {
 
+
+	.printmode {
+		.context {
+			padding-left: 10px !important;
+			padding-right: 10px !important;
+		}
+
+		.header > h1 {
+			max-width:75%;
+		}
+	}
 	.notmobile {
 		display: none;
 	}
