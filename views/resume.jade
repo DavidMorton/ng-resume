@@ -5,7 +5,7 @@
 	.body-content
 		text-content(content-id='profile', content-title='About Me', content-text='{{data.profile}}', class='screen')
 		text-content(content-id='profile-print', content-title='Profile', content-text='{{data.profile}}', class='print')
-		techskills(content-id='skills', content-title='Technical Skills', skills='data.skills')
+		techskills(content-id='skills', content-title='Technical Skills', skills='data.skills', skills-list='data.skillsList')
 		experience(content-id='exp', content-title='Experience', experiences='data.experience')
 		additional-experience(content-id='addlexp', content-title='Additional Activities', experiences='data.additionalExperience')
 		awards(content-id='awards', content-title='Awards and Certifications', all-awards='data.awards')

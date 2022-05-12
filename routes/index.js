@@ -19,7 +19,7 @@ router.get('/resume.html', function(req, res, next) {
 router.get('/', function(req, res, next) {
   	console.log(req.path);
   		res.render('index', { 
-   		title: 'David Morton - Software Developer - Resume'}
+   		title: 'David Morton - Resume'}
 	);
 });
 

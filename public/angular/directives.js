@@ -39,7 +39,8 @@ resumeApp.directive('techskills', function() { return {
     scope: {
         contentId: '@', 
         contentTitle: '@', 
-        skills: '='
+        skills: '=',
+        skillsList: '='
     }, 
     replace: true
 }});

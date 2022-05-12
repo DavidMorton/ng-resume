@@ -65,7 +65,6 @@ p { font-size:14px; }
 	}
 
 	.links {
-		font-size:20px;
 		padding-top:10px;
 		font-weight:normal;
 	}
@@ -75,12 +74,12 @@ p { font-size:14px; }
 	}
 
 .body-content {
-	padding:10px 40px 800px 40px;
+	padding:10px 40px 0px 40px;
 	white-space: pre-wrap;
 }
 
 	.body-content:before {
-		box-shadow: 3px 10px 3px 0px #AAAAAA;
+		/* box-shadow: 3px 10px 3px 0px #AAAAAA; */
 	    content: " ";
 	    height: 100%;
 	    position: fixed;
@@ -173,6 +172,9 @@ p {
 		font-weight:bold;
 		text-transform: uppercase;
 	}
+	h2 {
+		margin-bottom: 5px !important;
+	}
 	.wrapper {
 		all:initial;
 		font-family: "Lucida Grande", Helvetica, Arial, sans-serif;
@@ -192,10 +194,6 @@ p {
 	  	padding:0px !important;
 	  	margin:0px !important;
 	  	font-size:12px !important;
-	}
-
-	#davidMorton {
-		display:inline-block;
 	}
 
 	.skillCategory {
@@ -252,7 +250,7 @@ p {
 	}
 
 	.sectionContent {
-		padding-left:0px;
+		padding-left:10px !important;
 		width:100%;
 	}
 
@@ -290,8 +288,10 @@ p {
 	}
 
 	.jobTitle, .alignleft, .alignright { 
-		font-weight:normal !important;
+		font-weight:bold !important;
 		font-style:italic !important;
+		margin-bottom: 1px !important;
+		margin-top: 7px !important;
 	}
 
 	.alignleft, .alignright { 
@@ -303,11 +303,14 @@ p {
 		width:100%;
 		page-break-inside: avoid;
 		padding-left:0px;
-		margin-bottom:10px !important;
 	}
 }
 
 @media screen and (max-width: 850px) {
+
+	.notmobile {
+		display: none;
+	}
 
 	.wrapper, .header 
 	{
@@ -444,4 +447,10 @@ p {
       margin-right: 0;
       margin-bottom:0;
     }
+}
+
+@media screen and (min-width:851px) {
+	.notmobile {
+		display: initial;
+	}
 }

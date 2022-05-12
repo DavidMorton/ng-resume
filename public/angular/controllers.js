@@ -80,6 +80,13 @@ resumeApp.controller('resumeController', ['$scope', '$timeout', '$http', '$route
         .then(function(res) {
             $scope.data = res.data;
 
+            var skillsList = [].concat(...$scope.data.skills.map(x => x.values)).sort((a,b) => a.replace(/\./g, '').localeCompare(b.replace(/\./g, '')))
+            var languages = $scope.data.skills.filter(x => x.category == "Languages")[0].values
+            skillsList = skillsList.map(x => { return {value:x, bold:languages.indexOf(x) > -1}})
+            $scope.data.skillsList = skillsList
+
+            console.log($scope.data)
+
             $scope.section = '#' + ($routeParams.section || 'profile');
             if ($routeParams.subsection)
                 $scope.subsection = '#' + $routeParams.subsection;

@@ -1,14 +1,14 @@
 {
  	"name": "David Morton",
-    "occupation": "Software Developer",
-    "email": "david@isamorton.com",
-    "phone": "713-422-3448",
-    "profile": "I don't merely write code; I deliver solutions.\n\nI’m a passionate, insightful and effective software developer with over 10 years of creative problem-solving in C# and .NET, a deep understanding of SOLID principles, dependency injection, TDD and just starting Node.js.",
+    "occupation": "Software Developer and Machine Learning Engineer",
+    "email": "dvd.morton@gmail.com",
+    "phone": "713-632-5038",
+    "profile": "Experienced developer with 17 proven years of making computers do good and useful things for humans.",
 
     "links":
         [{
             "name": "Email", 
-            "address": "mailto://david@isamorton.com"
+            "address": "mailto://dvd.morton@gmail.com"
         },
         {
             "name": "GitHub", 
@@ -21,43 +21,68 @@
         {
             "name": "StackOverflow", 
             "address": "http://stackoverflow.com/users/45916/david-morton?tab=profile"
-        },
-		{ 
-			"name": "Twitter", 
-			"address": "http://twitter.com/hellodmo"
-		}],
+        }],
     "skills": [
         { 
             "category": "Languages", 
-            "values": ["C#", "Javascript", "HTML", "CSS", "XAML", "Objective-C", "F#"]
+            "values": ["C#", "Python", "Javascript", "HTML", "CSS", "XAML", "Objective-C", "F#"]
         }, 
         {
             "category": "Frameworks",
-            "values": [".NET", "Jquery", "Node.js", "Entity Framework", "WPF", "WCF", "ASP.NET", "NUnit", "WinForms", "VSTO"]
+            "values": ["Angular", ".NET", "Jquery", "Node.js", "Entity Framework", "WPF", "WCF", "ASP.NET", "NUnit", "WinForms", "VSTO", "SciKit Learn"]
         },
         {
             "category": "Databases", 
-            "values": ["SQL Server", "Oracle, SQL Server Compact"]
+            "values": ["SQL Server", "Oracle", "SQL Server Compact", "PostgreSQL"]
         }, 
         {
             "category": "Techniques", 
-            "values": ["SOLID", "TDD", "Dependency Injection", "Functional Programming", "MVC", "MVVM"]
+            "values": ["MLOps", "DevOps", "SOLID", "TDD", "Dependency Injection", "Functional Programming", "MVC", "MVVM"]
         }, 
         {
             "category": "Environments", 
-            "values": ["Visual Studio", "Xcode"]
+            "values": ["Visual Studio", "Xcode", "Azure", "AML"]
         },
         {
             "category": "Other", 
-            "values": ["Git", "ReSharper", "Debugging via decompiling"]
+            "values": ["Agile", "Git", "ReSharper", "Debugging via decompiling", "Docker", "Jenkins", "ADO Pipelines", "Travis.CI", "GIS"]
         }],
     "experience":
         [{
+			"company": "Chevron",
+			"title": "Product Owner - Machine Learning Operations",
+			"startDate": "January 2022",
+			"endDate": "Present",
+			"achievements": [
+				"Identified and led a team to build a workflow to deploy, monitor, and retrain ML models across the enterprise",
+				"Worked alongside Microsoft to give feedback on their Azure Machine Learning and Cognitive Services offerings",
+				"Consulted with Data Scientists and ML engineers to identify solutions to deployment and model management",
+				"Worked with architects and cloud engineers to ensure proper compliance and governance of systems"
+			]
+		},{
+			"company": "Chevron",
+			"title": "Machine Learning Engineer",
+			"startDate": "November 2019",
+			"endDate": "January 2022",
+			"achievements": [
+				"Reorganized a development team to begin visibly showing measurable progress.",
+				"Wrote multiple devops pipelines to ensure data science and machine learning work was deployed to production.",
+				"Led our team of combined data scientists and machine learning engineers towards better engineering rigor.",
+				"Reviewed the work of other teams within the organization for deployability and long-term maintainability.",
+				"Helped focus cloud infrastructure teams to better fill the needs of data scientists within the organization."
+			]
+		},
+		{
             "company": "Spot Traceability", 
             "title": "Lead Software Developer", 
             "startDate": "May 2016",
-            "endDate": "Present",
-            "achievements": []
+            "endDate": "November 2019",
+            "achievements": ["Designed, architected, and wrote the API and web side of Spot’s flagship traceability application.",
+			"Designed and implemented a dynamic forms product used by major oil & gas clients.",
+			"Wrote automated deployment and monitoring methodologies using Slack bots.",
+			"Replaced a team of four external consultants in my first two months.",
+			"Implemented over 1,200 unit tests using TDD.",
+			"Worked remotely 100% of the time."]
         },
         {
             "company": "JPMorgan Chase & Co.", 
@@ -191,5 +216,5 @@
 
     "about": "This resume was written in Jade and Angular.js with flourishes courtesy of Bootstrap.js, running on Node.js (Express) and continuously deployed to AWS via GitHub (see above link). \n\nThe layout, design and programming are mine. This site is print-friendly for those of you who like paper.\n\n:)",
 
-    "aboutPrint": "This resume was not written in Word. It's a combination of HTML, Jade, Bootstrap.js, Angular.js and JQuery.\nIf you want the latest version, you can find it at http://resume.isamorton.com/. The site us auto-deployed to AWS via Github, running on Node.js Express and uses responsive CSS to format the document so it looks like what you're seeing right now. "
+    "aboutPrint": "This resume was not written in Word. It's a combination of HTML, Jade, Bootstrap.js, Angular.js and JQuery.\nIf you want the latest version, you can find it at http://resume.hellodmo.com/. The site us auto-deployed to AWS via Github, running on Node.js Express and uses responsive CSS to format the document so it looks like what you're seeing right now. "
 }
