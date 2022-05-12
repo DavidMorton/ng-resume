@@ -2,19 +2,19 @@ resumeApp.config(['$routeProvider', function($routeProvider) {
 	$routeProvider
 
 	.when('/', {
-		templateUrl: '/resume.html',
+		templateUrl: 'resume.html',
 		controller: 'resumeController', 
 		reloadOnSearch: false
 	})
 
 	.when('/:section', {
-		templateUrl: '/resume.html', 
+		templateUrl: 'resume.html', 
 		controller: 'resumeController', 
 		reloadOnSearch: false
 	})
 
 	.when('/:section/:subsection', {
-		templateUrl: '/resume.html', 
+		templateUrl: 'resume.html', 
 		controller: 'resumeController', 
 		reloadOnSearch: false
 	});

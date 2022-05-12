@@ -76,7 +76,7 @@ resumeApp.controller('resumeController', ['$scope', '$timeout', '$http', '$route
             window.location.hash = $(e.currentTarget).closest('.section, .experience').attr('hash');
         };
 
-        $http.get('/json/resume.json')
+        $http.get('json/resume.json')
         .then(function(res) {
             $scope.data = res.data;
 

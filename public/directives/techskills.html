@@ -1,0 +1,10 @@
+
+<div id="{{contentId}}-section" hash="{{ &quot;#/&quot; + contentId }}" class="section">
+  <div> 
+    <h2 data-toggle="collapse" data-target="{{ &quot;#&quot; + contentId}}" href="{{ &quot;#&quot; + contentId }}" class="expander pointer collapsed">{{contentTitle}}</h2>
+  </div>
+  <div id="{{contentId}}" class="sectionContent collapse">
+    <p ng-repeat="skill in skills" class="screen skill"><span class="skillCategory">{{skill.category + ":&nbsp;"}}</span><span>{{skill.values.join(', ')}}</span></p>
+    <p class="print"><span ng-repeat="skill in skillsList"><span ng-style="{ fontWeight: (skill.bold ? 'bold' : 'normal') }">{{skill.value}}</span><span ng-if="$index != skillsList.length-1"> | </span></span></p>
+  </div>
+</div>

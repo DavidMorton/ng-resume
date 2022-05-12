@@ -1,0 +1,9 @@
+
+<div class="header">
+  <h1 id="davidMorton" class="screen">{{data.name}}</h1>
+  <h2 id="occupation" class="screen">{{data.occupation}}</h2>
+  <h1 class="print">{{data.name}} - {{data.phone}} - {{data.email}}</h1>
+  <h2 class="screen notmobile">{{data.phone}}</h2>
+  <h1 class="links screen mobile"><a href="{{ &quot;tel:+&quot; + data.phone }}">{{data.phone}}</a></h1>
+  <h2 class="links screen"><span ng-repeat="link in data.links"><a href="{{link.address}}" target="_blank">{{link.name}}</a>{{$last ? '' : ' | '}}</span></h2>
+</div>
