@@ -1,236 +1,338 @@
 {
- 	"name": "David Morton",
-    "occupation": "Software Developer/Machine Learning Engineer",
-    "email": "dvd.morton@gmail.com",
-    "phone": "713-632-5038",
-    "profile": "Experienced developer with 17 proven years of making computers do good and useful things for humans.",
-
-    "links":
-        [{
-            "name": "Email", 
-            "address": "mailto:dvd.morton@gmail.com"
+  "name": "David Morton",
+  "occupation": "Software Developer/Machine Learning Engineer",
+  "email": "dvd.morton@gmail.com",
+  "phone": "713-632-5038",
+  "profile": "Experienced developer with 17 proven years of making computers do good and useful things for humans.",
+  "links": [
+    {
+      "name": "Email",
+      "address": "mailto:dvd.morton@gmail.com"
+    },
+    {
+      "name": "GitHub",
+      "address": "https://github.com/DavidMorton"
+    },
+    {
+      "name": "LinkedIn",
+      "address": "https://www.linkedin.com/in/davidmmorton"
+    },
+    {
+      "name": "StackOverflow",
+      "address": "http://stackoverflow.com/users/45916/david-morton?tab=profile"
+    },
+    {
+      "name": "Download Resume",
+      "address": "./David Morton - Resume.pdf",
+      "download": true
+    }
+  ],
+  "skills": [
+    {
+      "category": "Languages",
+      "values": [
+        "C#",
+        "Python",
+        "Javascript",
+        "HTML",
+        "CSS",
+        "XAML",
+        "Objective-C",
+        "F#"
+      ]
+    },
+    {
+      "category": "Frameworks",
+      "values": [
+        "Angular",
+        ".NET",
+        "Jquery",
+        "Node.js",
+        "Entity Framework",
+        "WPF",
+        "WCF",
+        "ASP.NET",
+        "NUnit",
+        "WinForms",
+        "VSTO",
+        "SciKit Learn"
+      ]
+    },
+    {
+      "category": "Databases",
+      "values": [
+        "SQL Server",
+        "Oracle",
+        "SQL Server Compact",
+        "PostgreSQL"
+      ]
+    },
+    {
+      "category": "Techniques",
+      "values": [
+        "MLOps",
+        "DevOps",
+        "SOLID",
+        "TDD",
+        "Dependency Injection",
+        "Functional Programming",
+        "MVC",
+        "MVVM"
+      ]
+    },
+    {
+      "category": "Environments",
+      "values": [
+        "Visual Studio",
+        "Xcode",
+        "Azure",
+        "AML"
+      ]
+    },
+    {
+      "category": "Other",
+      "values": [
+        "Agile",
+        "Git",
+        "ReSharper",
+        "Debugging via decompiling",
+        "Docker",
+        "Jenkins",
+        "ADO Pipelines",
+        "Travis.CI",
+        "GIS"
+      ]
+    }
+  ],
+  "experience": [
+    {
+      "company": "Chevron",
+      "roles": [
+        {
+          "title": "Product Owner - Machine Learning Operations",
+          "startDate": "January 2022",
+          "endDate": "Present",
+          "achievements": [
+            "Identified and led a team to build a workflow to deploy, monitor, and retrain ML models across the enterprise",
+            "Worked alongside Microsoft to give feedback on their Azure Machine Learning and Cognitive Services offerings",
+            "Consulted with Data Scientists and ML engineers to identify solutions to deployment and model management",
+            "Worked with architects and cloud engineers to ensure proper compliance and governance of systems"
+          ]
         },
         {
-            "name": "GitHub", 
-            "address": "https://github.com/DavidMorton"
-        }, 
+          "title": "Machine Learning Engineer",
+          "startDate": "November 2019",
+          "endDate": "January 2022",
+          "achievements": [
+            "Reorganized a development team to begin visibly showing measurable progress.",
+            "Wrote multiple devops pipelines to ensure data science and machine learning work was deployed to production.",
+            "Led our team of combined data scientists and machine learning engineers towards better engineering rigor.",
+            "Reviewed the work of other teams within the organization for deployability and long-term maintainability.",
+            "Helped focus cloud infrastructure teams to better fill the needs of data scientists within the organization."
+          ]
+        }
+      ]
+    },
+    {
+      "company": "Spot Traceability",
+      "roles": [
         {
-            "name": "LinkedIn", 
-            "address": "https://www.linkedin.com/in/davidmmorton"
-        }, 
+          "title": "Lead Software Developer",
+          "startDate": "May 2016",
+          "endDate": "November 2019",
+          "achievements": [
+            "Designed, architected, and wrote the API and web side of Spot’s flagship traceability application.",
+            "Designed and implemented a dynamic forms product used by major oil & gas clients.",
+            "Wrote automated deployment and monitoring methodologies using Slack bots.",
+            "Replaced a team of four external consultants in my first two months.",
+            "Implemented over 1,200 unit tests using TDD.",
+            "Worked remotely 100% of the time."
+          ]
+        }
+      ]
+    },
+    {
+      "company": "JPMorgan Chase & Co.",
+      "roles": [
         {
-            "name": "StackOverflow", 
-            "address": "http://stackoverflow.com/users/45916/david-morton?tab=profile"
-        },
-		{
-			"name": "Download Resume",
-			"address": "./David Morton - Resume.pdf",
-			"download": true
-		}],
-    "skills": [
-        { 
-            "category": "Languages", 
-            "values": ["C#", "Python", "Javascript", "HTML", "CSS", "XAML", "Objective-C", "F#"]
-        }, 
-        {
-            "category": "Frameworks",
-            "values": ["Angular", ".NET", "Jquery", "Node.js", "Entity Framework", "WPF", "WCF", "ASP.NET", "NUnit", "WinForms", "VSTO", "SciKit Learn"]
-        },
-        {
-            "category": "Databases", 
-            "values": ["SQL Server", "Oracle", "SQL Server Compact", "PostgreSQL"]
-        }, 
-        {
-            "category": "Techniques", 
-            "values": ["MLOps", "DevOps", "SOLID", "TDD", "Dependency Injection", "Functional Programming", "MVC", "MVVM"]
-        }, 
-        {
-            "category": "Environments", 
-            "values": ["Visual Studio", "Xcode", "Azure", "AML"]
-        },
-        {
-            "category": "Other", 
-            "values": ["Agile", "Git", "ReSharper", "Debugging via decompiling", "Docker", "Jenkins", "ADO Pipelines", "Travis.CI", "GIS"]
-        }],
-    "experience":
-        [{
-			"company": "Chevron",
-			"title": "Product Owner - Machine Learning Operations",
-			"startDate": "January 2022",
-			"endDate": "Present",
-			"achievements": [
-				"Identified and led a team to build a workflow to deploy, monitor, and retrain ML models across the enterprise",
-				"Worked alongside Microsoft to give feedback on their Azure Machine Learning and Cognitive Services offerings",
-				"Consulted with Data Scientists and ML engineers to identify solutions to deployment and model management",
-				"Worked with architects and cloud engineers to ensure proper compliance and governance of systems"
-			]
-		},{
-			"company": "Chevron",
-			"title": "Machine Learning Engineer",
-			"startDate": "November 2019",
-			"endDate": "January 2022",
-			"achievements": [
-				"Reorganized a development team to begin visibly showing measurable progress.",
-				"Wrote multiple devops pipelines to ensure data science and machine learning work was deployed to production.",
-				"Led our team of combined data scientists and machine learning engineers towards better engineering rigor.",
-				"Reviewed the work of other teams within the organization for deployability and long-term maintainability.",
-				"Helped focus cloud infrastructure teams to better fill the needs of data scientists within the organization."
-			]
-		},
-		{
-            "company": "Spot Traceability", 
-            "title": "Lead Software Developer", 
-            "startDate": "May 2016",
-            "endDate": "November 2019",
-            "achievements": ["Designed, architected, and wrote the API and web side of Spot’s flagship traceability application.",
-			"Designed and implemented a dynamic forms product used by major oil & gas clients.",
-			"Wrote automated deployment and monitoring methodologies using Slack bots.",
-			"Replaced a team of four external consultants in my first two months.",
-			"Implemented over 1,200 unit tests using TDD.",
-			"Worked remotely 100% of the time."]
+          "title": "Associate Team Lead",
+          "startDate": "January 2015",
+          "endDate": "May 2016",
+          "achievements": [
+            "Responsible for the output of an agile team of five developers.",
+            "Managed a VSTO application with a WPF UI, and a backend on Server 2013 with 19 WCF Services.",
+            "Onboarded 27 independent components onto continuous integration and deployment.",
+            "Reduced coupling between reusable assemblies, dividing them into independent NuGet packages.",
+            "Linked automated TeamCity builds with a proprietary deployment system.",
+            "Organized the team to be self-sustaining by introducing peer code reviewing requirements.",
+            "Developed small, high impact applications, deployed on over 17,000 desktops across the enterprise.",
+            "Wrote Powershell scripts to standardize deployments."
+          ]
         },
         {
-            "company": "JPMorgan Chase & Co.", 
-            "title": "Associate Team Lead", 
-            "startDate": "January 2015", 
-            "endDate": "May 2016", 
-            "achievements": [ "Responsible for the output of an agile team of five developers.",
-				"Managed a VSTO application with a WPF UI, and a backend on Server 2013 with 19 WCF Services.",
-				"Onboarded 27 independent components onto continuous integration and deployment.",
-				"Reduced coupling between reusable assemblies, dividing them into independent NuGet packages.",
-				"Linked automated TeamCity builds with a proprietary deployment system.",
-				"Organized the team to be self-sustaining by introducing peer code reviewing requirements.", 
-				"Developed small, high impact applications, deployed on over 17,000 desktops across the enterprise.",
-				"Wrote Powershell scripts to standardize deployments."]
-        }, 
+          "title": "Associate Developer",
+          "startDate": "August 2013",
+          "endDate": "January 2015",
+          "achievements": [
+            "Designed and implemented a greenfield VSTO application with a WPF UI with over 1500 unit tests.",
+            "Designed a framework for 33 advanced PowerPoint charting types with custom formats.",
+            "Defined and presented on the best practices for a proprietary deployment system.",
+            "Worked heavily with, and developed a testable framework around COM Interop objects.",
+            "Integrated the front-end application with WCF services providing data from a Mongo database.",
+            "Led the team in story points completed, and number of lines of code written.",
+            "Trained the team in dependency injection and Test Driven Development best practices.",
+            "Worked in an Agile/SCRUM team using Atlasssian JIRA for issue management."
+          ]
+        }
+      ]
+    },
+    {
+      "company": "Muxica",
+      "roles": [
         {
-        	"company": "JPMorgan Chase & Co.", 
-        	"title": "Associate Developer",
-        	"startDate": "August 2013", 
-        	"endDate": "January 2015", 
-        	"achievements": ["Designed and implemented a greenfield VSTO application with a WPF UI with over 1500 unit tests.",
-					"Designed a framework for 33 advanced PowerPoint charting types with custom formats.",
-					"Defined and presented on the best practices for a proprietary deployment system.",
-					"Worked heavily with, and developed a testable framework around COM Interop objects.",
-					"Integrated the front-end application with WCF services providing data from a Mongo database.",
-					"Led the team in story points completed, and number of lines of code written.",
-					"Trained the team in dependency injection and Test Driven Development best practices.",
-					"Worked in an Agile/SCRUM team using Atlasssian JIRA for issue management."]
-        }, 
-		{
-			"company": "Muxica",
-			"title": "Founder/Owner/Developer/Designer",
-			"startDate": "June 2012",
-			"endDate": "August 2014",
-			"achievements": [
-				"Created an iPhone app to intelligently crossfade music.",
-				"Implemented an RMS compression algorithm to stabilize percieved audio volumes.",
-				"Connected with external APIs to fetch and suggest music based on user listening habits.",
-				"Implemented full accessibility to support visually-impaired users.",
-				"App was named \"App of the month\" by the AppleVIS, a visual impaired users community."  
-			]
-		},
+          "title": "Founder/Owner/Developer/Designer",
+          "startDate": "June 2012",
+          "endDate": "August 2014",
+          "achievements": [
+            "Created an iPhone app to intelligently crossfade music.",
+            "Implemented an RMS compression algorithm to stabilize percieved audio volumes.",
+            "Connected with external APIs to fetch and suggest music based on user listening habits.",
+            "Implemented full accessibility to support visually-impaired users.",
+            "App was named \"App of the month\" by the AppleVIS, a visual impaired users community."
+          ]
+        }
+      ]
+    },
+    {
+      "company": "LiquidFrameworks, LLC.",
+      "roles": [
         {
-        	"company": "LiquidFrameworks, LLC.", 
-        	"title": "Senior Developer",
-        	"startDate": "July 2010", 
-        	"endDate": "August 2013", 
-        	"achievements": ["Maintained and developed a disconnected WPF application using SQL Server Compact.",
-					"Transitioned the flagship product from a site-installed product to a cloud-based product.",
-					"Implemented several bits of functionality in SalesForce cloud.",
-					"Developed integration layers for Quickbooks, MAS90, Peachtree, and GreatPlains.",
-					"Implemented NHibernate, Castle Windsor and an object proxy system for the flagship app.",
-					"Developed two tie-in iOS applications using Objective-C.",
-					"Used ProtoBuf serialization to replace SQL Server replication, speeding up sync 500-fold.",
-					"Designed and implemented, from the ground up, an entire survey tool, along with 145 unit tests."]
-        }, 
+          "title": "Senior Developer",
+          "startDate": "July 2010",
+          "endDate": "August 2013",
+          "achievements": [
+            "Maintained and developed a disconnected WPF application using SQL Server Compact.",
+            "Transitioned the flagship product from a site-installed product to a cloud-based product.",
+            "Implemented several bits of functionality in SalesForce cloud.",
+            "Developed integration layers for Quickbooks, MAS90, Peachtree, and GreatPlains.",
+            "Implemented NHibernate, Castle Windsor and an object proxy system for the flagship app.",
+            "Developed two tie-in iOS applications using Objective-C.",
+            "Used ProtoBuf serialization to replace SQL Server replication, speeding up sync 500-fold.",
+            "Designed and implemented, from the ground up, an entire survey tool, along with 145 unit tests."
+          ]
+        }
+      ]
+    },
+    {
+      "company": "SolArc, Inc.",
+      "roles": [
         {
-        	"company": "SolArc, Inc.", 
-        	"title": "Senior Developer", 
-        	"startDate": "March 2010", 
-        	"endDate": "July 2010", 
-        	"achievements": ["Designed and implemented a report editing component for RightAngle, a commodities trading software.",
-					"Worked with a large-scale commodities trading platform written in WinForms and C#.",
-					"Converted portions of a PowerBuilder application into C#.",
-					"Designed a document editing system using Windows Workflow Foundation and DevExpress tools."]
-        }, 
+          "title": "Senior Developer",
+          "startDate": "March 2010",
+          "endDate": "July 2010",
+          "achievements": [
+            "Designed and implemented a report editing component for RightAngle, a commodities trading software.",
+            "Worked with a large-scale commodities trading platform written in WinForms and C#.",
+            "Converted portions of a PowerBuilder application into C#.",
+            "Designed a document editing system using Windows Workflow Foundation and DevExpress tools."
+          ]
+        }
+      ]
+    },
+    {
+      "company": "Catapult Systems",
+      "roles": [
         {
-        	"company": "Catapult Systems", 
-        	"title": "Senior Consultant", 
-        	"startDate": "August 2008", 
-        	"endDate": "March 2010", 
-        	"achievements": ["Designed, implemented and presented on an MVVM implementation in Silverlight 3.",
-					"Helped Catapult Systems, a Microsoft NSI, become thought leaders in the community.",
-					"Developed an ASP.NET MVC 2 application for an aviation insurance company.",
-					"Refactored a data-driven ASP.NET project to conform to SOLID principles.",
-					"Led various presentations on new technologies, including Jquery.",
-					"Worked for the Houston Texans for a short period of time maintaining their internal applications."]
-        }, 
+          "title": "Senior Consultant",
+          "startDate": "August 2008",
+          "endDate": "March 2010",
+          "achievements": [
+            "Designed, implemented and presented on an MVVM implementation in Silverlight 3.",
+            "Helped Catapult Systems, a Microsoft NSI, become thought leaders in the community.",
+            "Developed an ASP.NET MVC 2 application for an aviation insurance company.",
+            "Refactored a data-driven ASP.NET project to conform to SOLID principles.",
+            "Led various presentations on new technologies, including Jquery.",
+            "Worked for the Houston Texans for a short period of time maintaining their internal applications."
+          ]
+        },
         {
-        	"company": "Catapult Systems", 
-        	"title": "Consultant", 
-        	"startDate": "August 2007", 
-        	"endDate": "August 2008", 
-        	"achievements": ["Helped design and develop an ASP.NET project at a major air services provider in Houston.",
-					"Implemented JavaScript, Jquery and AJAX into ASP.NET when AJAX was brand new.",
-					"Implemented a WinForms application for a Florida court system using CAB and Infragistics controls."]
-        }, 
+          "title": "Consultant",
+          "startDate": "August 2007",
+          "endDate": "August 2008",
+          "achievements": [
+            "Helped design and develop an ASP.NET project at a major air services provider in Houston.",
+            "Implemented JavaScript, Jquery and AJAX into ASP.NET when AJAX was brand new.",
+            "Implemented a WinForms application for a Florida court system using CAB and Infragistics controls."
+          ]
+        }
+      ]
+    },
+    {
+      "company": "Hyperactive Concepts",
+      "roles": [
         {
-        	"company": "Hyperactive Concepts", 
-        	"title": "Freelance Developer", 
-        	"startDate": "September 2006", 
-        	"endDate": "June 2007", 
-        	"achievements": ["Developed C#, ASP.NET and Javascript applications for clients.",
-					"Completed an administrative back-end in T-SQL for a computer training company."]
-        }, 
+          "title": "Freelance Developer",
+          "startDate": "September 2006",
+          "endDate": "June 2007",
+          "achievements": [
+            "Developed C#, ASP.NET and Javascript applications for clients.",
+            "Completed an administrative back-end in T-SQL for a computer training company."
+          ]
+        }
+      ]
+    },
+    {
+      "company": "Aaron Rents, Inc.",
+      "roles": [
         {
-        	"company": "Aaron Rents, Inc.", 
-        	"title": "IT Applications Developer", 
-        	"startDate": "August 2006", 
-        	"endDate": "August 2007", 
-        	"achievements": ["Integrated Lawson accounting system and Concur expense reporting system.",
-					"Wrote an auto-dialer application with a user-friendly ASP.NET/Javascript UI.",
-					"Learned C# and worked with CSLA business objects.",
-					"Integrated accounting information between Made2Manage ERP and Lawson Accounting Software."]
-        }, 
+          "title": "IT Applications Developer",
+          "startDate": "August 2006",
+          "endDate": "August 2007",
+          "achievements": [
+            "Integrated Lawson accounting system and Concur expense reporting system.",
+            "Wrote an auto-dialer application with a user-friendly ASP.NET/Javascript UI.",
+            "Learned C# and worked with CSLA business objects.",
+            "Integrated accounting information between Made2Manage ERP and Lawson Accounting Software."
+          ]
+        },
         {
-        	"company": "Aaron Rents, Inc.", 
-        	"title": "IT Field Support", 
-        	"startDate": "September 2005", 
-        	"endDate": "August 2006", 
-        	"achievements": ["Re-imaged store servers and workstations using Norton Ghost.",
-					"Configured servers and workstations with DNS, DHCP, WINS, etc.",
-					"Automated my job by creating a VBA script.",
-					"Automated the job of my coworkers by upgrading the VBA script to VB.NET.",
-					"Took part in an ERP implementation, including translating data from the old data source to the new."]
-        }, 
+          "title": "IT Field Support",
+          "startDate": "September 2005",
+          "endDate": "August 2006",
+          "achievements": [
+            "Re-imaged store servers and workstations using Norton Ghost.",
+            "Configured servers and workstations with DNS, DHCP, WINS, etc.",
+            "Automated my job by creating a VBA script.",
+            "Automated the job of my coworkers by upgrading the VBA script to VB.NET.",
+            "Took part in an ERP implementation, including translating data from the old data source to the new."
+          ]
+        },
         {
-        	"company": "Aaron Rents, Inc.", 
-        	"title": "Acquisitions Auditor", 
-        	"startDate": "September 2004", 
-        	"endDate": "September 2005", 
-        	"achievements": ["Led multiple acquisitions, converting data from the old POS system to the Aaron Rents POS system.",
-					"Audited Aaron Rents store locations for compliance and risk management.",
-					"Began efforts to automate portions of the process, including the creation of acquisitions documents."]
-        }],
-
-    "additionalExperience": [
-        {
-        	"title": "Founder/President, Houston F# Users Group; April 2009-December 2009", 
-        	"description": "Marketed and led the F# Users group in conjunction with the local Microsoft Developer Evangelist."
-        }],
-
-    "certifications": [
-		"Certified SAFe 5 Product Owner/Product Manager",
-    	"Microsoft MVP (C#) 2010-2011", 
-    	"MCTS: .NET Framework 2.0 Web Applications"
-    ],
-
-    "education": "Texas A&M University - Bachelors degree in Psychology with a minor in Philosophy - 1997-2001",
-
-    "references": "Available upon request.",
-
-    "about": "This is an older resume project that I put together in AngularJS. Yeah, it's old, but it still works!  The layout, design and programming are mine. This site is print-friendly for those of you who like paper.\n\n:)",
-
-    "aboutPrint": "This resume is kept up to date at https://resume.hellodmo.com/"
+          "title": "Acquisitions Auditor",
+          "startDate": "September 2004",
+          "endDate": "September 2005",
+          "achievements": [
+            "Led multiple acquisitions, converting data from the old POS system to the Aaron Rents POS system.",
+            "Audited Aaron Rents store locations for compliance and risk management.",
+            "Began efforts to automate portions of the process, including the creation of acquisitions documents."
+          ]
+        }
+      ]
+    }
+  ],
+  "additionalExperience": [
+    {
+      "title": "Founder/President, Houston F# Users Group; April 2009-December 2009",
+      "description": "Marketed and led the F# Users group in conjunction with the local Microsoft Developer Evangelist."
+    }
+  ],
+  "certifications": [
+    "Certified SAFe 5 Product Owner/Product Manager",
+    "Microsoft MVP (C#) 2010-2011",
+    "MCTS: .NET Framework 2.0 Web Applications"
+  ],
+  "education": "Texas A&M University - Bachelors degree in Psychology with a minor in Philosophy - 1997-2001",
+  "references": "Available upon request.",
+  "about": "This is an older resume project that I put together in AngularJS. Yeah, it's old, but it still works!  The layout, design and programming are mine. This site is print-friendly for those of you who like paper.\n\n:)",
+  "aboutPrint": "This resume is kept up to date at https://resume.hellodmo.com/"
 }
