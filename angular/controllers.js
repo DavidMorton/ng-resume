@@ -77,7 +77,7 @@ resumeApp.controller('resumeController', ['$scope', '$timeout', '$http', '$route
         };
 
         $scope.togglePrint = function() {
-            $(document.body).toggleClass('printmode');
+            $('html').toggleClass('printmode');
         }
 
         $http.get('json/resume.json')

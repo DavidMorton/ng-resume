@@ -18,6 +18,7 @@ p { font-size:14px; }
 body:not(.printmode) {
 	.body-content { 
 		overflow: auto;
+		padding-bottom: 33vh;
 	}
 }
 
@@ -172,6 +173,19 @@ p {
 	display:none;
 }
 
+
+html.printmode {
+	height: initial !important;
+	overflow-y: auto;
+}
+
+@media print {
+	html {
+		height: initial !important;
+		overflow-y: auto;
+	}
+}
+
 #printmode {
 	.sectionContent, .experienceDetails {
 		pointer-events: none;
@@ -179,6 +193,10 @@ p {
 
 	body {
 		background-color: white;
+		height: initial;
+	}
+	.wrapper {
+		height: initial;
 	}
 	.header {
 		text-transform:uppercase;
@@ -530,4 +548,9 @@ p {
 	.notmobile {
 		display: initial;
 	}
+
+	body {
+		overflow: hidden;
+	}
+
 }
