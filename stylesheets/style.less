@@ -113,10 +113,26 @@ p.role {
 	font-weight: bold;
 }
 
+.companyNameContainer {
+	width: 100%;
+}
+
 p {
 	margin-bottom:10px;
 }
 
+.companyName.startDate, .companyName.endDate {
+	width: 50px;
+}
+
+.companyName.endDate, .companyName.startDate {
+	text-align: right;
+}
+
+.companyName.dash {
+	width:12px;
+	text-align:center;
+}
 
 	.jobtitle {
 		font-style: italic;
@@ -334,6 +350,14 @@ html.printmode {
 		width:0px;
 	}
 
+	.companyNameContainer {
+		margin-top: 0px !important;
+	}
+
+	.companyName {
+		margin-top: 0px !important;
+		width: initial !important;
+	}
 	.companyDetails {
 		padding-left: 10px !important;
 	}
@@ -345,8 +369,6 @@ html.printmode {
 	.jobTitle, .alignleft, .alignright { 
 		font-weight:bold !important;
 		font-style:italic !important;
-		margin-bottom: 1px !important;
-		margin-top: 7px !important;
 	}
 
 	.experience:not(:first-child) {

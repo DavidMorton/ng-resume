@@ -5,7 +5,13 @@
   </div>
   <div id="{{contentId}}" class="sectionContent collapse">
     <div ng-repeat="company in experiences" class="company">
-      <p data-toggle="collapse" data-target="#companydetails{{$index}}" hash="#/exp/exp{{$index}}"  class="pointer companyName">{{company.company}}</p><p class="alignright companyName">{{company.roles[company.roles.length - 1].startDate}} - {{company.roles[0].endDate}}</p>
+      <div hash="#/exp/exp{{$index}}" data-toggle="collapse" data-target="#companydetails{{$index}}" class="pointer companyNameContainer">
+        <p class="pointer companyName">{{company.company}}</p>
+        <p class="alignright companyName endDate">{{company.roles[0].endDate}}</p>
+        <p class="alignright companyName dash">-</p>      
+        <p class="alignright companyName startDate">{{company.roles[company.roles.length - 1].startDate}}</p>
+      </div>
+      
       <div id="companydetails{{$index}}" class="companyDetails collapse">
         <div ng-repeat="role in company.roles" class="experience">
           <p class="jobtitle">{{role.title}}, {{role.startDate}}-{{role.endDate}}</p>

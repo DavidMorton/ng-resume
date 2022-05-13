@@ -110,7 +110,7 @@
       "roles": [
         {
           "title": "Technical Product Owner - Machine Learning Operations",
-          "startDate": "January 2022",
+          "startDate": "Jan 2022",
           "endDate": "Present",
           "achievements": [
             "Identified and led a team to build a workflow to deploy, monitor, and retrain ML models",
@@ -121,8 +121,8 @@
         },
         {
           "title": "Machine Learning Engineer",
-          "startDate": "November 2019",
-          "endDate": "January 2022",
+          "startDate": "Nov 2019",
+          "endDate": "Jan 2022",
           "achievements": [
             "Reorganized a development team to begin visibly showing measurable progress.",
             "Wrote devops pipelines to ensure data science and ML work was deployed to production.",
@@ -139,7 +139,7 @@
         {
           "title": "Lead Software Developer",
           "startDate": "May 2016",
-          "endDate": "November 2019",
+          "endDate": "Nov 2019",
           "achievements": [
             "Designed, architected, and wrote the API and web side of Spot’s flagship traceability application.",
             "Designed and implemented a dynamic forms product used by major oil & gas clients.",
@@ -156,7 +156,7 @@
       "roles": [
         {
           "title": "Associate Team Lead",
-          "startDate": "January 2015",
+          "startDate": "Jan 2015",
           "endDate": "May 2016",
           "achievements": [
             "Responsible for the output of an agile team of five developers.",
@@ -171,8 +171,8 @@
         },
         {
           "title": "Associate Developer",
-          "startDate": "August 2013",
-          "endDate": "January 2015",
+          "startDate": "Aug 2013",
+          "endDate": "Jan 2015",
           "achievements": [
             "Designed and implemented a greenfield VSTO application with a WPF UI with over 1500 unit tests.",
             "Designed a framework for 33 advanced PowerPoint charting types with custom formats.",
@@ -191,8 +191,8 @@
       "roles": [
         {
           "title": "Founder/Owner/Developer/Designer",
-          "startDate": "June 2012",
-          "endDate": "August 2014",
+          "startDate": "Jun 2012",
+          "endDate": "Aug 2014",
           "achievements": [
             "Created an iPhone app to intelligently crossfade music.",
             "Implemented an RMS compression algorithm to stabilize percieved audio volumes.",
@@ -208,8 +208,8 @@
       "roles": [
         {
           "title": "Senior Developer",
-          "startDate": "July 2010",
-          "endDate": "August 2013",
+          "startDate": "Jul 2010",
+          "endDate": "Aug 2013",
           "achievements": [
             "Maintained and developed a disconnected WPF application using SQL Server Compact.",
             "Transitioned the flagship product from a site-installed product to a cloud-based product.",
@@ -228,8 +228,8 @@
       "roles": [
         {
           "title": "Senior Developer",
-          "startDate": "March 2010",
-          "endDate": "July 2010",
+          "startDate": "Mar 2010",
+          "endDate": "Jul 2010",
           "achievements": [
             "Designed and implemented a report editing component for RightAngle, a commodities trading software.",
             "Worked with a large-scale commodities trading platform written in WinForms and C#.",
@@ -244,8 +244,8 @@
       "roles": [
         {
           "title": "Senior Consultant",
-          "startDate": "August 2008",
-          "endDate": "March 2010",
+          "startDate": "Aug 2008",
+          "endDate": "Mar 2010",
           "achievements": [
             "Designed, implemented and presented on an MVVM implementation in Silverlight 3.",
             "Helped Catapult Systems, a Microsoft NSI, become thought leaders in the community.",
@@ -257,8 +257,8 @@
         },
         {
           "title": "Consultant",
-          "startDate": "August 2007",
-          "endDate": "August 2008",
+          "startDate": "Aug 2007",
+          "endDate": "Aug 2008",
           "achievements": [
             "Helped design and develop an ASP.NET project at a major air services provider in Houston.",
             "Implemented JavaScript, Jquery and AJAX into ASP.NET when AJAX was brand new.",
@@ -272,8 +272,8 @@
       "roles": [
         {
           "title": "Freelance Developer",
-          "startDate": "September 2006",
-          "endDate": "June 2007",
+          "startDate": "Sep 2006",
+          "endDate": "Jun 2007",
           "achievements": [
             "Developed C#, ASP.NET and Javascript applications for clients.",
             "Completed an administrative back-end in T-SQL for a computer training company."
@@ -286,8 +286,8 @@
       "roles": [
         {
           "title": "IT Applications Developer",
-          "startDate": "August 2006",
-          "endDate": "August 2007",
+          "startDate": "Aug 2006",
+          "endDate": "Aug 2007",
           "achievements": [
             "Integrated Lawson accounting system and Concur expense reporting system.",
             "Wrote an auto-dialer application with a user-friendly ASP.NET/Javascript UI.",
@@ -297,8 +297,8 @@
         },
         {
           "title": "IT Field Support",
-          "startDate": "September 2005",
-          "endDate": "August 2006",
+          "startDate": "Sep 2005",
+          "endDate": "Aug 2006",
           "achievements": [
             "Re-imaged store servers and workstations using Norton Ghost.",
             "Configured servers and workstations with DNS, DHCP, WINS, etc.",
@@ -309,8 +309,8 @@
         },
         {
           "title": "Acquisitions Auditor",
-          "startDate": "September 2004",
-          "endDate": "September 2005",
+          "startDate": "Sep 2004",
+          "endDate": "Sep 2005",
           "achievements": [
             "Led multiple acquisitions, converting data from the old POS system to the Aaron Rents POS system.",
             "Audited Aaron Rents store locations for compliance and risk management.",
