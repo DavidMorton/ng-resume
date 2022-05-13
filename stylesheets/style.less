@@ -3,11 +3,18 @@ html, body {
 	height:100%;
 	text-align:center;
 	padding:0px 0px;
-	font-family: "Helvetica Neue";
+	font-family: 'Helvetica 55 Roman', sans-serif;
 }
 
-h1, h2, h3 {
+h2, h3 {
 	margin:0px;
+	font-family: 'Bebas Neue', sans-serif;
+	font-weight: bold;
+}
+h1 {
+	margin:0px;
+	font-family: 'Helvetica Neue', sans-serif;
+	font-weight: bold;
 }
 
 h1 { font-size:24px; }
@@ -102,6 +109,8 @@ body:not(.printmode) {
 
 p.role {
 	font-size:16px;
+	font-family: 'Helvetica 55 Roman', sans-serif;
+	font-weight: bold;
 }
 
 p {
@@ -166,7 +175,7 @@ p {
 	}
 
 .skillCategory {
-	font-style:italic;
+	font-weight: bold;
 }
 
 .mobile { 
@@ -187,6 +196,9 @@ html.printmode {
 }
 
 #printmode {
+	h1,h2,h3,p,span {
+		font-family: Helvetica, sans-serif !important;
+	}
 	.sectionContent, .experienceDetails {
 		pointer-events: none;
 	}
@@ -345,7 +357,7 @@ html.printmode {
 @media print {
 	#printmode();
 
-	.printToggle {
+	.printToggle, .printButton {
 		display: none !important;
 	}
 	
@@ -373,6 +385,10 @@ html.printmode {
 		right: 0px;
 		top: 0px;
 	}
+	.printButton {
+		right: 0px;
+		top: 18px;
+	}
 
 	.context {
 		background-color: white;
@@ -387,6 +403,12 @@ html.printmode {
 	position: absolute !important;
 	right: 7px;
 	top: 6px;
+	cursor: pointer;
+}
+.printButton {
+	position: absolute !important;
+	right: 7px;
+	top: 28px;
 	cursor: pointer;
 }
 

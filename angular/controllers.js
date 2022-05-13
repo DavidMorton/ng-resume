@@ -137,6 +137,7 @@ resumeApp.controller('resumeController', ['$scope', '$timeout', '$http', '$route
                 $('.sectionContent, .experienceDetails').on('hidden.bs.collapse', $scope.onCollapse);
 
                 $('.printToggle').on('click', $scope.togglePrint);
+                $('a:contains("Download Resume")').removeAttr('target').attr('download', 'David Morton - Resume.pdf')
 
                 $('.wrapper').fadeIn(500);
             });

@@ -1,6 +1,6 @@
 {
  	"name": "David Morton",
-    "occupation": "Software Developer and Machine Learning Engineer",
+    "occupation": "Software Developer/Machine Learning Engineer",
     "email": "dvd.morton@gmail.com",
     "phone": "713-632-5038",
     "profile": "Experienced developer with 17 proven years of making computers do good and useful things for humans.",
@@ -21,7 +21,12 @@
         {
             "name": "StackOverflow", 
             "address": "http://stackoverflow.com/users/45916/david-morton?tab=profile"
-        }],
+        },
+		{
+			"name": "Download Resume",
+			"address": "./David Morton - Resume.pdf",
+			"download": true
+		}],
     "skills": [
         { 
             "category": "Languages", 
