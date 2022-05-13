@@ -24,7 +24,7 @@ resumeApp.directive('awards', function() { return {
     scope: { 
         contentId: '@', 
         contentTitle: '@', 
-        allAwards: '='
+        certifications: '='
     },
     replace: true, 
 }});
