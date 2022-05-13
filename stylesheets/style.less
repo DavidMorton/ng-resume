@@ -117,15 +117,14 @@ p {
 	margin-bottom:10px;
 }
 
-.experience {
-	padding-top:10px;
-}
 
 	.jobtitle {
 		font-style: italic;
 		clear:both;
 		display:inline-block;
-		width:100%
+		width:100%;
+		font-weight: bold;
+		padding-left:10px;
 	}
 
 	.alignleft {
@@ -335,11 +334,35 @@ html.printmode {
 		width:0px;
 	}
 
+	.companyDetails {
+		padding-left: 10px !important;
+	}
+
+	.company:not(:first-child) {
+		margin-top: 10px !important;
+	}
+
 	.jobTitle, .alignleft, .alignright { 
 		font-weight:bold !important;
 		font-style:italic !important;
 		margin-bottom: 1px !important;
 		margin-top: 7px !important;
+	}
+
+	.experience:not(:first-child) {
+		margin-top: 10px !important;
+	}
+
+	.experience .experienceDetails {
+		margin-top: 3px !important;
+	}
+
+	.experience:first-child {
+		margin-top: 5px !important;
+	}
+
+	.jobtitle {
+		font-weight: normal;
 	}
 
 	.alignleft, .alignright { 
@@ -351,6 +374,10 @@ html.printmode {
 		width:100%;
 		page-break-inside: avoid;
 		padding-left:0px;
+	}
+
+	.company {
+		page-break-inside: avoid;
 	}
 }
 
@@ -448,9 +475,9 @@ html.printmode {
 		display:none;
 	}
 	
-	h1 { font-size:18px; }
-	h2 { font-size:16px; }
-	h3 { font-size:14px; }
+	h1 { font-size:22px; }
+	h2 { font-size:20px; }
+	h3 { font-size:16px; }
 
 	h1, .body-content {
 		padding:0px;

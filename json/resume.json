@@ -109,13 +109,13 @@
       "company": "Chevron",
       "roles": [
         {
-          "title": "Product Owner - Machine Learning Operations",
+          "title": "Technical Product Owner - Machine Learning Operations",
           "startDate": "January 2022",
           "endDate": "Present",
           "achievements": [
-            "Identified and led a team to build a workflow to deploy, monitor, and retrain ML models across the enterprise",
-            "Worked alongside Microsoft to give feedback on their Azure Machine Learning and Cognitive Services offerings",
-            "Consulted with Data Scientists and ML engineers to identify solutions to deployment and model management",
+            "Identified and led a team to build a workflow to deploy, monitor, and retrain ML models",
+            "Worked alongside Microsoft to give feedback on Azure Machine Learning and Cognitive Services",
+            "Consulted with Data Scientists and ML engineers to deployment and manage ML models",
             "Worked with architects and cloud engineers to ensure proper compliance and governance of systems"
           ]
         },
@@ -125,9 +125,9 @@
           "endDate": "January 2022",
           "achievements": [
             "Reorganized a development team to begin visibly showing measurable progress.",
-            "Wrote multiple devops pipelines to ensure data science and machine learning work was deployed to production.",
-            "Led our team of combined data scientists and machine learning engineers towards better engineering rigor.",
-            "Reviewed the work of other teams within the organization for deployability and long-term maintainability.",
+            "Wrote devops pipelines to ensure data science and ML work was deployed to production.",
+            "Led our team of combined data scientists and MLEs towards better engineering rigor.",
+            "Reviewed the work of other teams within the organization for deployability and maintainability.",
             "Helped focus cloud infrastructure teams to better fill the needs of data scientists within the organization."
           ]
         }

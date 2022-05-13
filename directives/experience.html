@@ -4,11 +4,11 @@
     <h2 data-toggle="collapse" data-target="{{ &quot;#&quot; + contentId}}" href="{{ &quot;#&quot; + contentId }}" class="expander pointer collapsed">{{contentTitle}}</h2>
   </div>
   <div id="{{contentId}}" class="sectionContent collapse">
-    <div ng-repeat="company in experiences" hash="#/exp/exp{{experiences.length - $index}}" class="company">
-      <p data-toggle="collapse" class="pointer collapsed companyName">{{company.company}} ({{company.roles[company.roles.length - 1].startDate}} - {{company.roles[0].endDate}})</p>
-      <div class="companyDetails">
-        <div ng-repeat="role in company.roles" class="experience jobtitle">
-          <p>{{role.title}}, {{role.startDate}}-{{role.endDate}}</p>
+    <div ng-repeat="company in experiences" class="company">
+      <p data-toggle="collapse" data-target="#companydetails{{$index}}" hash="#/exp/exp{{$index}}"  class="pointer companyName">{{company.company}}</p><p class="alignright companyName">{{company.roles[company.roles.length - 1].startDate}} - {{company.roles[0].endDate}}</p>
+      <div id="companydetails{{$index}}" class="companyDetails collapse">
+        <div ng-repeat="role in company.roles" class="experience">
+          <p class="jobtitle">{{role.title}}, {{role.startDate}}-{{role.endDate}}</p>
           <div class="experienceDetails" id="exp{{experiences.length - $index}}" class="">
             <ul>
               <li ng-repeat="highlight in role.achievements">{{highlight}}</li>
