@@ -117,6 +117,19 @@
 					"Trained the team in dependency injection and Test Driven Development best practices.",
 					"Worked in an Agile/SCRUM team using Atlasssian JIRA for issue management."]
         }, 
+		{
+			"company": "Muxica",
+			"title": "Founder/Owner/Developer/Designer",
+			"startDate": "June 2012",
+			"endDate": "August 2014",
+			"achievements": [
+				"Created an iPhone app to intelligently crossfade music.",
+				"Implemented an RMS compression algorithm to stabilize percieved audio volumes.",
+				"Connected with external APIs to fetch and suggest music based on user listening habits.",
+				"Implemented full accessibility to support visually-impaired users.",
+				"App was named \"App of the month\" by the AppleVIS, a visual impaired users community."  
+			]
+		},
         {
         	"company": "LiquidFrameworks, LLC.", 
         	"title": "Senior Developer",
@@ -201,16 +214,14 @@
 					"Began efforts to automate portions of the process, including the creation of acquisitions documents."]
         }],
 
-    "additionalExperience": [{
-        	"title": "Founder/Designer/Developer, Muxica; July 2012-July 2014",
-        	"description": "Designed and developed an iPhone music app that was highly used in the visually impaired community."
-        }, 
+    "additionalExperience": [
         {
         	"title": "Founder/President, Houston F# Users Group; April 2009-December 2009", 
         	"description": "Marketed and led the F# Users group in conjunction with the local Microsoft Developer Evangelist."
         }],
 
-    "awards": [
+    "certifications": [
+		"Certified SAFe 5 Product Owner/Product Manager",
     	"Microsoft MVP (C#) 2010-2011", 
     	"MCTS: .NET Framework 2.0 Web Applications"
     ],
