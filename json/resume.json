@@ -8,7 +8,7 @@
     "links":
         [{
             "name": "Email", 
-            "address": "mailto://dvd.morton@gmail.com"
+            "address": "mailto:dvd.morton@gmail.com"
         },
         {
             "name": "GitHub", 
