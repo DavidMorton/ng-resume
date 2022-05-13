@@ -368,7 +368,7 @@ html.printmode {
 
 	.jobTitle, .alignleft, .alignright { 
 		font-weight:bold !important;
-		font-style:italic !important;
+		
 	}
 
 	.experience:not(:first-child) {
@@ -389,7 +389,6 @@ html.printmode {
 
 	.alignleft, .alignright { 
 		font-weight:normal;
-		font-style:italic;
 	}
 
 	.experience {
@@ -546,7 +545,7 @@ html.printmode {
 	 }
 
 	.experience {
-		margin-left:15px;
+		margin-left:10px;
 	}
 
 	h1 p {
@@ -607,11 +606,14 @@ html.printmode {
 
 	}
 
+	.jobtitle {
+		padding-left: 0px !important;
+	}
+
 	.alignright {
-		float: none;
 		margin:0px;
 		padding-top:0px;
-		padding-bottom:10px;
+		padding-bottom:0px;
 	}
 
     .navbar-fixed-top, .navbar-fixed-bottom, .navbar-static-top {
@@ -619,6 +621,12 @@ html.printmode {
       margin-right: 0;
       margin-bottom:0;
     }
+
+}
+
+
+.company {
+	padding-top:10px;
 }
 
 @media screen and (min-width:851px) {

@@ -17,9 +17,9 @@ resumeApp.controller('resumeController', ['$scope', '$timeout', '$http', '$route
 
                 var currentScroll = scrollElement.scrollTop();
 
-                var result = (currentScroll + currentPosition) - h1Height;
+                var result = (currentScroll + currentPosition) - h1Height - 5;
             } else {
-                var scrollElement = $('body');
+                var scrollElement = $('html');
 
                 var result = currentPosition - h1Height;
             }
@@ -69,6 +69,7 @@ resumeApp.controller('resumeController', ['$scope', '$timeout', '$http', '$route
             $(e.currentTarget).on('shown.bs.collapse', function() {
                 $(e.currentTarget).off('shown.bs.collapse');
                 $scope.scrollToElement(closest);
+                
             });
 
             $('.sectionContent, .experienceDetails').on('hidden.bs.collapse');
@@ -133,8 +134,21 @@ resumeApp.controller('resumeController', ['$scope', '$timeout', '$http', '$route
                     section.collapse('show');
                 }
 
-                $('.sectionContent, .experienceDetails').on('show.bs.collapse', $scope.onShow);
-                $('.sectionContent, .experienceDetails').on('hidden.bs.collapse', $scope.onCollapse);
+                $('.sectionContent, .experienceDetails').on('show.bs.collapse', function(e) { $scope.onShow(e) });
+                $('.sectionContent, .experienceDetails').on('hidden.bs.collapse', function(e) { $scope.onCollapse(e) });
+
+                $('.companyDetails').on('show.bs.collapse', function(e) {
+                    e.stopPropagation()
+                    $('.companyDetails').not(e.currentTarget).collapse('hide')
+                    setTimeout(function() {
+                        $scope.scrollToElement($(e.currentTarget).closest('.company'))
+                    },500)
+                }).on('hidden.bs.collapse', function(e) { 
+                    e.stopPropagation();
+                    if ($('.companyNameContainer[aria-expanded=true]').length == 0) {
+                        $scope.scrollToElement($("#exp-section"))
+                    }
+                 })
 
                 $('.printToggle').on('click', $scope.togglePrint);
                 $('a:contains("Download Resume")').removeAttr('target').attr('download', 'David Morton - Resume.pdf')
