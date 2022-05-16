@@ -7,9 +7,12 @@
     <div ng-repeat="company in experiences" class="company">
       <div hash="#/exp/exp{{$index}}" data-toggle="collapse" data-target="#companydetails{{$index}}" class="pointer companyNameContainer">
         <p class="pointer companyName">{{company.company}}</p>
-        <p class="alignright companyName endDate">{{company.roles[0].endDate}}</p>
-        <p class="alignright companyName dash">-</p>      
-        <p class="alignright companyName startDate">{{company.roles[company.roles.length - 1].startDate}}</p>
+        <div class="alignright experienceDateWrapper">  
+          <p class="companyName startDate">{{company.roles[company.roles.length - 1].startDate}}</p>
+          <p class="companyName dash">-</p>      
+          <p class="companyName endDate">{{company.roles[0].endDate}}</p>
+        </div>
+
       </div>
       
       <div id="companydetails{{$index}}" class="companyDetails collapse">
